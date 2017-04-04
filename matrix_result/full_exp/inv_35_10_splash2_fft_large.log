@@ -1,0 +1,408 @@
+[Benchmarks] set sniper output to rundi /scratch/miz087/results/inv_35_10_splash2_fft_large
+/scratch/miz087/results/inv_35_10_splash2_fft_large
+[SPLASH] Benchmarks to run: fft
+
+[SPLASH] [========== Running benchmark fft ==========]
+[SPLASH] Setting up run directory: /scratch/miz087/results/inv_35_10_splash2_fft_large
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/inv_35_10_splash2_fft_large' -sthermalstats --power -c gainestown_cache --roi --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks  --  /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/fft/FFT -m22 -p4':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+Normal Cache Total set: 524288
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/inv_35_10_splash2_fft_large/sim.scripts.py
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using Pin frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+FFT with Blocking Transpose
+   4194304 Complex Doubles
+   4 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 3997.31 seconds
+[SNIPER] Simulated 2294.4M instructions, 1699.1M cycles, 1.35 IPC
+[SNIPER] Simulation speed 577.6 KIPS (144.4 KIPS / target core - 6925.1ns/instr)
+[SNIPER] Sampling: executed 16.58% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[HOOKS] Leaving ROI
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0        -341009423     1065939906      -3.12584
+
+                 TIMING INFORMATION
+Start time                        :        511609895
+Initialization finish time        :       1940459590
+Overall finish time               :       1599450167
+Total time with initialization    :       1087840272
+Total time without initialization :       -341009423
+Overall transpose time            :       1065939906
+Overall transpose fraction        :         -3.12584
+
+
+ ***** [DRAM_CACHE_Result] *****
+
+*** DRAM Total Access: 18868113, miss: 1414470, miss rate: 0.0749662
+*** DRAM Total Access In ROI: 12774780, miss: 957458, miss rate: 0.0749491
+*** DRAM Remap Times: 54060 invalid times, 569272 total invalid_blocks, 0 migrate times, 0 total migrate blocks.
+*** DRAM Statistics: 2115133599 reads, 646205971 writes, 2240376460 row hits, 100746071 ACT time, 100746071 PRE time, 83119665 RD time, 17626376 WR time.
+
+ ***** [DRAM_CACHE_Result] *****
+
+[RAMULATOR OUTPUT]
+
+**Total Ticks: 515522901
+
+**Ramulator Active Cycles: 1.98736e+08
+
+**DRAM Cycles: 5.15523e+08
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 4.08512e+07
+
+**Serving Request**
+Channel_0: serving reads(1268866), serving writes(328174).
+Channel_1: serving reads(884994), serving writes(263583).
+Channel_2: serving reads(883013), serving writes(263862).
+Channel_3: serving reads(927536), serving writes(279273).
+Channel_4: serving reads(923424), serving writes(275623).
+Channel_5: serving reads(909408), serving writes(271994).
+Channel_6: serving reads(889336), serving writes(264766).
+Channel_7: serving reads(909496), serving writes(272230).
+Channel_8: serving reads(944395), serving writes(287646).
+Channel_9: serving reads(900852), serving writes(270051).
+Channel_10: serving reads(890433), serving writes(271312).
+Channel_11: serving reads(937624), serving writes(274898).
+Channel_12: serving reads(941287), serving writes(284485).
+Channel_13: serving reads(902950), serving writes(272778).
+Channel_14: serving reads(894964), serving writes(269947).
+Channel_15: serving reads(1046110), serving writes(318844).
+Channel_16: serving reads(1182707), serving writes(363696).
+Channel_17: serving reads(1119491), serving writes(341320).
+Channel_18: serving reads(1115705), serving writes(340162).
+Channel_19: serving reads(1090426), serving writes(330974).
+Channel_20: serving reads(1039769), serving writes(314669).
+Channel_21: serving reads(940359), serving writes(285362).
+Channel_22: serving reads(912401), serving writes(276644).
+Channel_23: serving reads(1005746), serving writes(305478).
+Channel_24: serving reads(914738), serving writes(276221).
+Channel_25: serving reads(907707), serving writes(275729).
+Channel_26: serving reads(884542), serving writes(267003).
+Channel_27: serving reads(915035), serving writes(276086).
+Channel_28: serving reads(917480), serving writes(277561).
+Channel_29: serving reads(883717), serving writes(266952).
+Channel_30: serving reads(883895), serving writes(266085).
+Channel_31: serving reads(920521), serving writes(276723).
+[RAMULATOR OUTPUT]
+
+----------[STAT_STORE_UNIT]-----------
+
+Hot Access: 7267074, Cool Access: 33593085
+
+Hits on previous hot rows: 286681
+
+Hits on previous cool rows: 4635
+
+Total remap times: 27030, Total Inter-Vault remaps: 27030, Total number of intervals: 2816
+
+
+----------[STAT_STORE_UNIT]-----------
+
+ ***** [REF/AC_Result] *****
+/*BANK*/0->0: cool access (151909), hot access (0), error acces (0).
+/*BANK*/0->1: cool access (182114), hot access (0), error acces (0).
+/*BANK*/0->2: cool access (175792), hot access (0), error acces (0).
+/*BANK*/0->3: cool access (174433), hot access (0), error acces (0).
+/*BANK*/0->4: cool access (173688), hot access (0), error acces (0).
+/*BANK*/0->5: cool access (164335), hot access (0), error acces (0).
+/*BANK*/0->6: cool access (164457), hot access (0), error acces (0).
+/*BANK*/0->7: cool access (668684), hot access (0), error acces (0).
+/*BANK*/1->0: cool access (135550), hot access (0), error acces (0).
+/*BANK*/1->1: cool access (169298), hot access (0), error acces (0).
+/*BANK*/1->2: cool access (165761), hot access (0), error acces (0).
+/*BANK*/1->3: cool access (171705), hot access (0), error acces (0).
+/*BANK*/1->4: cool access (163945), hot access (0), error acces (0).
+/*BANK*/1->5: cool access (156839), hot access (0), error acces (0).
+/*BANK*/1->6: cool access (159740), hot access (0), error acces (0).
+/*BANK*/1->7: cool access (142195), hot access (0), error acces (0).
+/*BANK*/2->0: cool access (148621), hot access (0), error acces (0).
+/*BANK*/2->1: cool access (163387), hot access (0), error acces (0).
+/*BANK*/2->2: cool access (164872), hot access (0), error acces (0).
+/*BANK*/2->3: cool access (165387), hot access (0), error acces (0).
+/*BANK*/2->4: cool access (166613), hot access (0), error acces (0).
+/*BANK*/2->5: cool access (155400), hot access (0), error acces (0).
+/*BANK*/2->6: cool access (151094), hot access (0), error acces (0).
+/*BANK*/2->7: cool access (148218), hot access (0), error acces (0).
+/*BANK*/3->0: cool access (155468), hot access (0), error acces (0).
+/*BANK*/3->1: cool access (175616), hot access (0), error acces (0).
+/*BANK*/3->2: cool access (178374), hot access (0), error acces (0).
+/*BANK*/3->3: cool access (174688), hot access (0), error acces (0).
+/*BANK*/3->4: cool access (170548), hot access (0), error acces (0).
+/*BANK*/3->5: cool access (162835), hot access (0), error acces (0).
+/*BANK*/3->6: cool access (162196), hot access (0), error acces (0).
+/*BANK*/3->7: cool access (156208), hot access (0), error acces (0).
+/*BANK*/4->0: cool access (163072), hot access (0), error acces (0).
+/*BANK*/4->1: cool access (173217), hot access (0), error acces (0).
+/*BANK*/4->2: cool access (168621), hot access (0), error acces (0).
+/*BANK*/4->3: cool access (166215), hot access (0), error acces (0).
+/*BANK*/4->4: cool access (176075), hot access (0), error acces (0).
+/*BANK*/4->5: cool access (167513), hot access (0), error acces (0).
+/*BANK*/4->6: cool access (150354), hot access (0), error acces (0).
+/*BANK*/4->7: cool access (155682), hot access (0), error acces (0).
+/*BANK*/5->0: cool access (163677), hot access (0), error acces (0).
+/*BANK*/5->1: cool access (175214), hot access (0), error acces (0).
+/*BANK*/5->2: cool access (173064), hot access (0), error acces (0).
+/*BANK*/5->3: cool access (172665), hot access (0), error acces (0).
+/*BANK*/5->4: cool access (165199), hot access (0), error acces (0).
+/*BANK*/5->5: cool access (167119), hot access (0), error acces (0).
+/*BANK*/5->6: cool access (150672), hot access (0), error acces (0).
+/*BANK*/5->7: cool access (149056), hot access (0), error acces (0).
+/*BANK*/6->0: cool access (162503), hot access (0), error acces (0).
+/*BANK*/6->1: cool access (165960), hot access (0), error acces (0).
+/*BANK*/6->2: cool access (169886), hot access (0), error acces (0).
+/*BANK*/6->3: cool access (163406), hot access (0), error acces (0).
+/*BANK*/6->4: cool access (165204), hot access (0), error acces (0).
+/*BANK*/6->5: cool access (151285), hot access (0), error acces (0).
+/*BANK*/6->6: cool access (148457), hot access (0), error acces (0).
+/*BANK*/6->7: cool access (152576), hot access (0), error acces (0).
+/*BANK*/7->0: cool access (162449), hot access (0), error acces (0).
+/*BANK*/7->1: cool access (164941), hot access (0), error acces (0).
+/*BANK*/7->2: cool access (175535), hot access (0), error acces (0).
+/*BANK*/7->3: cool access (168759), hot access (0), error acces (0).
+/*BANK*/7->4: cool access (167687), hot access (0), error acces (0).
+/*BANK*/7->5: cool access (158209), hot access (0), error acces (0).
+/*BANK*/7->6: cool access (152653), hot access (0), error acces (0).
+/*BANK*/7->7: cool access (144676), hot access (0), error acces (0).
+/*BANK*/8->0: cool access (14978), hot access (171593), error acces (0).
+/*BANK*/8->1: cool access (14929), hot access (159796), error acces (0).
+/*BANK*/8->2: cool access (142402), hot access (33670), error acces (0).
+/*BANK*/8->3: cool access (159418), hot access (17488), error acces (0).
+/*BANK*/8->4: cool access (175328), hot access (0), error acces (0).
+/*BANK*/8->5: cool access (166860), hot access (0), error acces (0).
+/*BANK*/8->6: cool access (156491), hot access (0), error acces (0).
+/*BANK*/8->7: cool access (153428), hot access (0), error acces (0).
+/*BANK*/9->0: cool access (100192), hot access (77882), error acces (0).
+/*BANK*/9->1: cool access (68338), hot access (102675), error acces (0).
+/*BANK*/9->2: cool access (170632), hot access (0), error acces (0).
+/*BANK*/9->3: cool access (149340), hot access (17388), error acces (0).
+/*BANK*/9->4: cool access (159953), hot access (0), error acces (0).
+/*BANK*/9->5: cool access (160830), hot access (0), error acces (0).
+/*BANK*/9->6: cool access (146220), hot access (0), error acces (0).
+/*BANK*/9->7: cool access (156020), hot access (0), error acces (0).
+/*BANK*/10->0: cool access (18945), hot access (155824), error acces (0).
+/*BANK*/10->1: cool access (35155), hot access (125577), error acces (0).
+/*BANK*/10->2: cool access (154217), hot access (16069), error acces (0).
+/*BANK*/10->3: cool access (143264), hot access (15953), error acces (0).
+/*BANK*/10->4: cool access (163009), hot access (0), error acces (0).
+/*BANK*/10->5: cool access (154393), hot access (0), error acces (0).
+/*BANK*/10->6: cool access (152101), hot access (0), error acces (0).
+/*BANK*/10->7: cool access (144394), hot access (0), error acces (0).
+/*BANK*/11->0: cool access (172140), hot access (24905), error acces (0).
+/*BANK*/11->1: cool access (165709), hot access (17778), error acces (0).
+/*BANK*/11->2: cool access (172125), hot access (0), error acces (0).
+/*BANK*/11->3: cool access (174267), hot access (0), error acces (0).
+/*BANK*/11->4: cool access (160277), hot access (0), error acces (0).
+/*BANK*/11->5: cool access (165320), hot access (0), error acces (0).
+/*BANK*/11->6: cool access (147848), hot access (0), error acces (0).
+/*BANK*/11->7: cool access (154421), hot access (0), error acces (0).
+/*BANK*/12->0: cool access (0), hot access (187993), error acces (187993).
+/*BANK*/12->1: cool access (0), hot access (166976), error acces (30430).
+/*BANK*/12->2: cool access (0), hot access (175156), error acces (18811).
+/*BANK*/12->3: cool access (14751), hot access (165141), error acces (0).
+/*BANK*/12->4: cool access (149831), hot access (16508), error acces (0).
+/*BANK*/12->5: cool access (160611), hot access (0), error acces (0).
+/*BANK*/12->6: cool access (157823), hot access (0), error acces (0).
+/*BANK*/12->7: cool access (152874), hot access (0), error acces (0).
+/*BANK*/13->0: cool access (13422), hot access (160061), error acces (0).
+/*BANK*/13->1: cool access (0), hot access (167451), error acces (18970).
+/*BANK*/13->2: cool access (81669), hot access (86214), error acces (0).
+/*BANK*/13->3: cool access (20432), hot access (142900), error acces (0).
+/*BANK*/13->4: cool access (161768), hot access (0), error acces (0).
+/*BANK*/13->5: cool access (158124), hot access (0), error acces (0).
+/*BANK*/13->6: cool access (154683), hot access (0), error acces (0).
+/*BANK*/13->7: cool access (157104), hot access (0), error acces (0).
+/*BANK*/14->0: cool access (0), hot access (176257), error acces (158362).
+/*BANK*/14->1: cool access (12843), hot access (145716), error acces (16716).
+/*BANK*/14->2: cool access (17775), hot access (152990), error acces (0).
+/*BANK*/14->3: cool access (32966), hot access (134132), error acces (0).
+/*BANK*/14->4: cool access (153966), hot access (0), error acces (0).
+/*BANK*/14->5: cool access (163339), hot access (0), error acces (0).
+/*BANK*/14->6: cool access (149400), hot access (0), error acces (0).
+/*BANK*/14->7: cool access (140660), hot access (0), error acces (0).
+/*BANK*/15->0: cool access (84568), hot access (324817), error acces (0).
+/*BANK*/15->1: cool access (75159), hot access (90733), error acces (0).
+/*BANK*/15->2: cool access (154348), hot access (17502), error acces (0).
+/*BANK*/15->3: cool access (166717), hot access (0), error acces (0).
+/*BANK*/15->4: cool access (166896), hot access (0), error acces (0).
+/*BANK*/15->5: cool access (152901), hot access (0), error acces (0).
+/*BANK*/15->6: cool access (150394), hot access (0), error acces (0).
+/*BANK*/15->7: cool access (160385), hot access (0), error acces (0).
+/*BANK*/16->0: cool access (0), hot access (617100), error acces (525902).
+/*BANK*/16->1: cool access (0), hot access (176358), error acces (39254).
+/*BANK*/16->2: cool access (0), hot access (178991), error acces (0).
+/*BANK*/16->3: cool access (16858), hot access (178036), error acces (0).
+/*BANK*/16->4: cool access (163201), hot access (0), error acces (0).
+/*BANK*/16->5: cool access (169569), hot access (0), error acces (0).
+/*BANK*/16->6: cool access (155486), hot access (0), error acces (0).
+/*BANK*/16->7: cool access (146355), hot access (0), error acces (0).
+/*BANK*/17->0: cool access (0), hot access (575010), error acces (0).
+/*BANK*/17->1: cool access (7048), hot access (148776), error acces (0).
+/*BANK*/17->2: cool access (88613), hot access (77708), error acces (0).
+/*BANK*/17->3: cool access (110389), hot access (47058), error acces (0).
+/*BANK*/17->4: cool access (161332), hot access (0), error acces (0).
+/*BANK*/17->5: cool access (157461), hot access (0), error acces (0).
+/*BANK*/17->6: cool access (145842), hot access (0), error acces (0).
+/*BANK*/17->7: cool access (149963), hot access (0), error acces (0).
+/*BANK*/18->0: cool access (0), hot access (643317), error acces (68170).
+/*BANK*/18->1: cool access (0), hot access (152048), error acces (611).
+/*BANK*/18->2: cool access (15656), hot access (149167), error acces (0).
+/*BANK*/18->3: cool access (52170), hot access (108351), error acces (0).
+/*BANK*/18->4: cool access (151909), hot access (0), error acces (0).
+/*BANK*/18->5: cool access (159386), hot access (0), error acces (0).
+/*BANK*/18->6: cool access (158638), hot access (0), error acces (0).
+/*BANK*/18->7: cool access (147546), hot access (0), error acces (0).
+/*BANK*/19->0: cool access (94046), hot access (425519), error acces (0).
+/*BANK*/19->1: cool access (152195), hot access (25671), error acces (0).
+/*BANK*/19->2: cool access (157935), hot access (17050), error acces (0).
+/*BANK*/19->3: cool access (171914), hot access (0), error acces (0).
+/*BANK*/19->4: cool access (155115), hot access (0), error acces (0).
+/*BANK*/19->5: cool access (159165), hot access (0), error acces (0).
+/*BANK*/19->6: cool access (147802), hot access (0), error acces (0).
+/*BANK*/19->7: cool access (156619), hot access (0), error acces (0).
+/*BANK*/20->0: cool access (0), hot access (383857), error acces (298583).
+/*BANK*/20->1: cool access (0), hot access (173665), error acces (24449).
+/*BANK*/20->2: cool access (143), hot access (172208), error acces (0).
+/*BANK*/20->3: cool access (11378), hot access (176273), error acces (0).
+/*BANK*/20->4: cool access (166054), hot access (0), error acces (0).
+/*BANK*/20->5: cool access (164210), hot access (0), error acces (0).
+/*BANK*/20->6: cool access (155256), hot access (0), error acces (0).
+/*BANK*/20->7: cool access (152550), hot access (0), error acces (0).
+/*BANK*/21->0: cool access (6689), hot access (232884), error acces (0).
+/*BANK*/21->1: cool access (154), hot access (157946), error acces (0).
+/*BANK*/21->2: cool access (101260), hot access (66709), error acces (0).
+/*BANK*/21->3: cool access (100074), hot access (67915), error acces (0).
+/*BANK*/21->4: cool access (166550), hot access (0), error acces (0).
+/*BANK*/21->5: cool access (162670), hot access (0), error acces (0).
+/*BANK*/21->6: cool access (145888), hot access (0), error acces (0).
+/*BANK*/21->7: cool access (153372), hot access (0), error acces (0).
+/*BANK*/22->0: cool access (0), hot access (229154), error acces (32172).
+/*BANK*/22->1: cool access (0), hot access (158951), error acces (6635).
+/*BANK*/22->2: cool access (10183), hot access (170341), error acces (0).
+/*BANK*/22->3: cool access (48256), hot access (102768), error acces (0).
+/*BANK*/22->4: cool access (148913), hot access (0), error acces (0).
+/*BANK*/22->5: cool access (150001), hot access (0), error acces (0).
+/*BANK*/22->6: cool access (150047), hot access (0), error acces (0).
+/*BANK*/22->7: cool access (146297), hot access (0), error acces (0).
+/*BANK*/23->0: cool access (22232), hot access (331407), error acces (0).
+/*BANK*/23->1: cool access (126913), hot access (47005), error acces (0).
+/*BANK*/23->2: cool access (144888), hot access (25392), error acces (0).
+/*BANK*/23->3: cool access (177443), hot access (0), error acces (0).
+/*BANK*/23->4: cool access (166587), hot access (0), error acces (0).
+/*BANK*/23->5: cool access (161240), hot access (0), error acces (0).
+/*BANK*/23->6: cool access (156353), hot access (0), error acces (0).
+/*BANK*/23->7: cool access (154577), hot access (0), error acces (0).
+/*BANK*/24->0: cool access (0), hot access (175589), error acces (175589).
+/*BANK*/24->1: cool access (0), hot access (169079), error acces (90365).
+/*BANK*/24->2: cool access (0), hot access (168084), error acces (36466).
+/*BANK*/24->3: cool access (526), hot access (161734), error acces (0).
+/*BANK*/24->4: cool access (133334), hot access (23903), error acces (0).
+/*BANK*/24->5: cool access (160333), hot access (0), error acces (0).
+/*BANK*/24->6: cool access (152490), hot access (0), error acces (0).
+/*BANK*/24->7: cool access (151121), hot access (0), error acces (0).
+/*BANK*/25->0: cool access (0), hot access (168010), error acces (0).
+/*BANK*/25->1: cool access (0), hot access (167882), error acces (31205).
+/*BANK*/25->2: cool access (46287), hot access (128380), error acces (0).
+/*BANK*/25->3: cool access (1170), hot access (161630), error acces (0).
+/*BANK*/25->4: cool access (166501), hot access (0), error acces (0).
+/*BANK*/25->5: cool access (162082), hot access (0), error acces (0).
+/*BANK*/25->6: cool access (153493), hot access (0), error acces (0).
+/*BANK*/25->7: cool access (155973), hot access (0), error acces (0).
+/*BANK*/26->0: cool access (0), hot access (165836), error acces (165031).
+/*BANK*/26->1: cool access (0), hot access (164901), error acces (32790).
+/*BANK*/26->2: cool access (0), hot access (166100), error acces (0).
+/*BANK*/26->3: cool access (17174), hot access (141983), error acces (0).
+/*BANK*/26->4: cool access (157651), hot access (0), error acces (0).
+/*BANK*/26->5: cool access (154287), hot access (0), error acces (0).
+/*BANK*/26->6: cool access (147165), hot access (0), error acces (0).
+/*BANK*/26->7: cool access (141819), hot access (0), error acces (0).
+/*BANK*/27->0: cool access (869), hot access (173162), error acces (0).
+/*BANK*/27->1: cool access (59586), hot access (104353), error acces (0).
+/*BANK*/27->2: cool access (146610), hot access (26203), error acces (0).
+/*BANK*/27->3: cool access (167329), hot access (0), error acces (0).
+/*BANK*/27->4: cool access (160364), hot access (0), error acces (0).
+/*BANK*/27->5: cool access (163900), hot access (0), error acces (0).
+/*BANK*/27->6: cool access (150840), hot access (0), error acces (0).
+/*BANK*/27->7: cool access (160834), hot access (0), error acces (0).
+/*BANK*/28->0: cool access (0), hot access (172948), error acces (171677).
+/*BANK*/28->1: cool access (0), hot access (170500), error acces (60681).
+/*BANK*/28->2: cool access (244), hot access (171681), error acces (0).
+/*BANK*/28->3: cool access (746), hot access (161696), error acces (0).
+/*BANK*/28->4: cool access (165458), hot access (0), error acces (0).
+/*BANK*/28->5: cool access (160573), hot access (0), error acces (0).
+/*BANK*/28->6: cool access (159469), hot access (0), error acces (0).
+/*BANK*/28->7: cool access (148745), hot access (0), error acces (0).
+/*BANK*/29->0: cool access (467), hot access (166107), error acces (0).
+/*BANK*/29->1: cool access (825), hot access (151755), error acces (0).
+/*BANK*/29->2: cool access (135813), hot access (32493), error acces (0).
+/*BANK*/29->3: cool access (144362), hot access (24382), error acces (0).
+/*BANK*/29->4: cool access (159056), hot access (0), error acces (0).
+/*BANK*/29->5: cool access (161699), hot access (0), error acces (0).
+/*BANK*/29->6: cool access (140037), hot access (0), error acces (0).
+/*BANK*/29->7: cool access (152098), hot access (0), error acces (0).
+/*BANK*/30->0: cool access (0), hot access (166025), error acces (8554).
+/*BANK*/30->1: cool access (0), hot access (163977), error acces (8452).
+/*BANK*/30->2: cool access (15419), hot access (150173), error acces (0).
+/*BANK*/30->3: cool access (81638), hot access (80916), error acces (0).
+/*BANK*/30->4: cool access (154717), hot access (0), error acces (0).
+/*BANK*/30->5: cool access (161926), hot access (0), error acces (0).
+/*BANK*/30->6: cool access (152314), hot access (0), error acces (0).
+/*BANK*/30->7: cool access (147511), hot access (0), error acces (0).
+/*BANK*/31->0: cool access (2696), hot access (171410), error acces (0).
+/*BANK*/31->1: cool access (164090), hot access (8369), error acces (0).
+/*BANK*/31->2: cool access (174357), hot access (0), error acces (0).
+/*BANK*/31->3: cool access (173314), hot access (0), error acces (0).
+/*BANK*/31->4: cool access (167779), hot access (0), error acces (0).
+/*BANK*/31->5: cool access (151543), hot access (0), error acces (0).
+/*BANK*/31->6: cool access (161104), hot access (0), error acces (0).
+/*BANK*/31->7: cool access (152751), hot access (0), error acces (0).
+{Summary}: 13323041 Hot Accesses, 31374804 Cool Accesses.
+
+ ***** [REF/AC_Result] *****
+                     Power     Energy    Energy %
+  core-core        24.10 W     2.62  J     29.95%
+  core-ifetch       4.69 W     0.51  J      5.83%
+  core-alu          1.68 W     0.18  J      2.09%
+  core-int          3.18 W     0.35  J      3.96%
+  core-fp           4.85 W     0.53  J      6.02%
+  core-mem          4.09 W     0.44  J      5.08%
+  core-other        3.79 W     0.41  J      4.72%
+  icache            3.50 W     0.38  J      4.35%
+  dcache            8.84 W     0.96  J     10.99%
+  l2                1.86 W     0.20  J      2.31%
+  l3                3.60 W     0.39  J      4.48%
+  dram             16.24 W     1.76  J     20.18%
+  other             0.03 W     3.55 mJ      0.04%
+
+  core             46.39 W     5.03  J     57.65%
+  cache            17.81 W     1.93  J     22.13%
+  total            80.46 W     8.73  J    100.00%
+Warning: Unable to run gnuplot to create cpi stack graphs.  Maybe gnuplot is not installed?
+[SNIPER] End
+[SNIPER] Elapsed time: 5407.41 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.
+/scratch/miz087/results/inv_35_10_splash2_fft_large
