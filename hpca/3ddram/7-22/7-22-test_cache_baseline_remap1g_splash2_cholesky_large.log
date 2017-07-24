@@ -1,0 +1,566 @@
+[Benchmarks] set sniper output to rundir:  /scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large
+/scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large
+[SPLASH] Benchmarks to run: cholesky
+
+[SPLASH] [========== Running benchmark cholesky ==========]
+[SPLASH] Setting up run directory: /scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large
+[SPLASH] Extracting output: gunzip < /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/cholesky/inputs/tk29.O.Z > /scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large/tk29.O
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large' -sthermalstats --power -c cache_baseline_remap1g -s stop-by-icount:5000000000 --roi --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks  --  /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/cholesky/CHOLESKY -p4 tk29.O':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+[DvfsManager] Core 0 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 1 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 2 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 3 at 2.66 GHz (global clock 2.66 GHz)
+Normal Cache Total set: 524288
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large/sim.scripts.py
+[STOPBYICOUNT] Waiting for application ROI
+[STOPBYICOUNT] Then stopping after simulating at least 5000000000 instructions in detail
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using Pin frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+Sparse Cholesky Factorization
+     Problem:         
+     4 Processors
+     Postpass partition size: 32
+     16384 byte cache
+
+
+true partitions
+Fan-out, no block copy-across
+LB domain, embedded distribution
+No ordering
+3231 supers, 4.33 nodes/super, 174 max super
+3231/1187 supers before/after
+393059150/405034303 (1.03) ops before/after amalgamation
+before partition
+Divide for 4 P, 138 domains, 0.57 of work static, 0.96 eff, (inf overall)
+419301 total domain updates
+1779 max height, 405034303 ops, 75891.76 conc, 137.74 bl for 4 P
+Target partition size 0, postpass size 32
+Processor array is 2 by 2
+No redistribution
+Supers: 60: 2  84: 1  111: 1  138: 1  168: 1  222: 1  546: 1  
+Blocks: 27: 1  28: 6  30: 4  31: 2  32: 20  33: 4  34: 5  35: 2  
+44 partitions
+44 partitions, 824 blocks
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+
+************recordStats once at 97885
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[STOPBYICOUNT] Application ROI started, now simulating 5000000000 in detail
+
+************recordStats once at 97885
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Setting instrumentation mode to DETAILED
+
+************recordStats once at 98801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+************recordStats once at 99801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 32.4893, Dynamic: 17.561
+*[Hotspot] begin initialization!
+[DTM Trigger] CPU_MAX(THRES): 75.263(105.000), DRAM_MAX(THRES): 65.980(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 100800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.6685, Dynamic: 22.306
+[DTM Trigger] CPU_MAX(THRES): 84.057(105.000), DRAM_MAX(THRES): 68.604(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 101801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.6378, Dynamic: 21.6158
+[DTM Trigger] CPU_MAX(THRES): 87.448(105.000), DRAM_MAX(THRES): 71.071(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 102801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.5243, Dynamic: 21.0593
+[DTM Trigger] CPU_MAX(THRES): 91.760(105.000), DRAM_MAX(THRES): 73.425(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 103801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.2247, Dynamic: 19.1258
+[DTM Trigger] CPU_MAX(THRES): 92.949(105.000), DRAM_MAX(THRES): 75.519(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 104801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.1124, Dynamic: 20.9024
+[DTM Trigger] CPU_MAX(THRES): 95.733(105.000), DRAM_MAX(THRES): 77.308(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 105801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.3001, Dynamic: 19.3527
+[DTM Trigger] CPU_MAX(THRES): 96.915(105.000), DRAM_MAX(THRES): 78.935(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 106801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.4963, Dynamic: 20.0786
+[DTM Trigger] CPU_MAX(THRES): 99.586(105.000), DRAM_MAX(THRES): 80.379(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 107801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.7658, Dynamic: 19.5897
+[DTM Trigger] CPU_MAX(THRES): 100.729(105.000), DRAM_MAX(THRES): 81.723(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 108798
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.2016, Dynamic: 18.9668
+[DTM Trigger] CPU_MAX(THRES): 101.476(105.000), DRAM_MAX(THRES): 82.981(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 109801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.3963, Dynamic: 20.9705
+[DTM Trigger] CPU_MAX(THRES): 100.943(105.000), DRAM_MAX(THRES): 84.018(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 110801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.2278, Dynamic: 20.3523
+[DTM Trigger] CPU_MAX(THRES): 102.292(105.000), DRAM_MAX(THRES): 85.061(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 21
+---invalid_cnt: 2048
+
+************recordStats once at 111801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.9399, Dynamic: 19.9454
+[DTM Trigger] CPU_MAX(THRES): 104.067(105.000), DRAM_MAX(THRES): 85.938(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 112801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.5343, Dynamic: 17.974
+[DTM Trigger] CPU_MAX(THRES): 106.896(105.000), DRAM_MAX(THRES): 86.817(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 113801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.673, Dynamic: 17.2062
+[DTM Trigger] CPU_MAX(THRES): 109.554(105.000), DRAM_MAX(THRES): 87.668(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 106
+---invalid_cnt: 10240
+
+************recordStats once at 114801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.4884, Dynamic: 18.1226
+[DTM Trigger] CPU_MAX(THRES): 110.555(105.000), DRAM_MAX(THRES): 88.425(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 192
+---invalid_cnt: 18432
+
+************recordStats once at 115801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.6795, Dynamic: 17.0845
+[DTM Trigger] CPU_MAX(THRES): 109.325(105.000), DRAM_MAX(THRES): 89.130(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 42
+---invalid_cnt: 4096
+
+************recordStats once at 116801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.1512, Dynamic: 16.7536
+[DTM Trigger] CPU_MAX(THRES): 111.854(105.000), DRAM_MAX(THRES): 89.675(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 85
+---invalid_cnt: 8192
+
+************recordStats once at 117800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.0423, Dynamic: 18.7987
+[DTM Trigger] CPU_MAX(THRES): 111.272(105.000), DRAM_MAX(THRES): 90.134(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 234
+---invalid_cnt: 22528
+
+************recordStats once at 118801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.4704, Dynamic: 18.1296
+[DTM Trigger] CPU_MAX(THRES): 111.295(105.000), DRAM_MAX(THRES): 90.592(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 149
+---invalid_cnt: 14336
+
+************recordStats once at 119801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.9031, Dynamic: 18.8543
+[DTM Trigger] CPU_MAX(THRES): 110.825(105.000), DRAM_MAX(THRES): 90.930(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 212
+---invalid_cnt: 20480
+
+************recordStats once at 120800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.5006, Dynamic: 19.0355
+[DTM Trigger] CPU_MAX(THRES): 110.545(105.000), DRAM_MAX(THRES): 91.305(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 296
+---invalid_cnt: 28672
+
+************recordStats once at 121801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.8167, Dynamic: 20.1269
+[DTM Trigger] CPU_MAX(THRES): 110.998(105.000), DRAM_MAX(THRES): 91.561(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 21
+---invalid_cnt: 2048
+
+************recordStats once at 122801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.5609, Dynamic: 17.8097
+[DTM Trigger] CPU_MAX(THRES): 113.272(105.000), DRAM_MAX(THRES): 91.703(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 123801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 38.5093, Dynamic: 21.8228
+[DTM Trigger] CPU_MAX(THRES): 113.130(105.000), DRAM_MAX(THRES): 91.855(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 124801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 40.527, Dynamic: 22.0749
+[DTM Trigger] CPU_MAX(THRES): 114.369(105.000), DRAM_MAX(THRES): 92.165(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 125801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.5869, Dynamic: 22.0174
+[DTM Trigger] CPU_MAX(THRES): 114.963(105.000), DRAM_MAX(THRES): 92.503(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 126801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.2418, Dynamic: 21.4429
+[DTM Trigger] CPU_MAX(THRES): 115.184(105.000), DRAM_MAX(THRES): 92.856(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 127801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.5679, Dynamic: 22.2853
+[DTM Trigger] CPU_MAX(THRES): 116.399(105.000), DRAM_MAX(THRES): 93.239(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 128801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.7389, Dynamic: 22.4807
+[DTM Trigger] CPU_MAX(THRES): 117.432(105.000), DRAM_MAX(THRES): 93.593(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 129801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.5713, Dynamic: 22.2737
+[DTM Trigger] CPU_MAX(THRES): 117.705(105.000), DRAM_MAX(THRES): 93.944(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 130801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.8063, Dynamic: 22.6676
+[DTM Trigger] CPU_MAX(THRES): 117.965(105.000), DRAM_MAX(THRES): 94.260(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 42
+---invalid_cnt: 4096
+
+************recordStats once at 131801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.7021, Dynamic: 22.9528
+[DTM Trigger] CPU_MAX(THRES): 118.688(105.000), DRAM_MAX(THRES): 94.556(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 43
+---invalid_cnt: 4096
+
+************recordStats once at 132800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.841, Dynamic: 23.2517
+[DTM Trigger] CPU_MAX(THRES): 118.790(105.000), DRAM_MAX(THRES): 94.356(85.000)
+	Current DTM method: 0
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 85
+---invalid_cnt: 8192
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 2186.72 seconds
+
+************recordStats once at 133555
+
+************recordStats once at 133555
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 40.2108, Dynamic: 23.4182
+[DTM Trigger] CPU_MAX(THRES): 119.305(105.000), DRAM_MAX(THRES): 94.586(85.000)
+	Current DTM method: 0
+Here we try remapping!
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.4741, Dynamic: 20.6034
+[DTM Trigger] CPU_MAX(THRES): 118.191(105.000), DRAM_MAX(THRES): 94.632(85.000)
+	Current DTM method: 0
+Here we try remapping!
+[SNIPER] Simulated 843.3M instructions, 355.3M cycles, 2.37 IPC
+[SNIPER] Simulation speed 381.2 KIPS (95.3 KIPS / target core - 10492.5ns/instr)
+[SNIPER] Sampling: executed 26.47% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[HOOKS] Leaving ROI
+405034303 operations for factorization
+
+                            PROCESS STATISTICS
+              Total
+ Proc         Time 
+    0    2116312505
+                            TIMING INFORMATION
+Start time                        :       1041795443
+Initialization finish time        :       1713735974
+Overall finish time               :       -464918817
+Total time with initialization    :      -1506714260
+Total time without initialization :       2116312505
+
+
+************recordStats once at 133555
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.4741, Dynamic: 20.6034
+[DTM Trigger] CPU_MAX(THRES): 117.981(105.000), DRAM_MAX(THRES): 94.620(85.000)
+	Current DTM method: 0
+Here we try remapping!
+
+ ***** [DRAM_CACHE_Result] *****
+
+*** DRAM Total Access: 5311112, page miss: 26397, block misses: 203039, miss: 229436, miss rate: 0.0431992
+*** DRAM Total Access In ROI: 3101661, miss: 133367, miss rate: 0.0429986
+*** DRAM Remap Times: 147456 invalid times, 142470 total invalid_blocks, 0 migrate times, 0 total migrate blocks.
+*** DRAM Statistics: 218614195 reads, 63633052 writes, 152871159 row hits, 13296789 ACT time, 13296789 PRE time, 5175552 RD time, 1472841 WR time.
+
+ ***** [DRAM_CACHE_Result] *****
+
+[RAMULATOR OUTPUT]
+
+**Total Ticks: 170774073
+
+**Ramulator Active Cycles: 1.11004e+08
+
+**DRAM Cycles: 1.70774e+08
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 1.06121e+07
+
+**Serving Request**
+Channel_0: serving reads(7332707), serving writes(2120773).
+Channel_1: serving reads(0), serving writes(0).
+Channel_2: serving reads(0), serving writes(0).
+Channel_3: serving reads(0), serving writes(0).
+Channel_4: serving reads(0), serving writes(0).
+Channel_5: serving reads(0), serving writes(0).
+Channel_6: serving reads(0), serving writes(0).
+Channel_7: serving reads(0), serving writes(0).
+Channel_8: serving reads(0), serving writes(0).
+Channel_9: serving reads(0), serving writes(0).
+Channel_10: serving reads(0), serving writes(0).
+Channel_11: serving reads(0), serving writes(0).
+Channel_12: serving reads(0), serving writes(0).
+Channel_13: serving reads(0), serving writes(0).
+Channel_14: serving reads(0), serving writes(0).
+Channel_15: serving reads(0), serving writes(0).
+Channel_16: serving reads(0), serving writes(0).
+Channel_17: serving reads(0), serving writes(0).
+Channel_18: serving reads(0), serving writes(0).
+Channel_19: serving reads(0), serving writes(0).
+Channel_20: serving reads(0), serving writes(0).
+Channel_21: serving reads(0), serving writes(0).
+Channel_22: serving reads(0), serving writes(0).
+Channel_23: serving reads(0), serving writes(0).
+Channel_24: serving reads(0), serving writes(0).
+Channel_25: serving reads(0), serving writes(0).
+Channel_26: serving reads(0), serving writes(0).
+Channel_27: serving reads(0), serving writes(0).
+Channel_28: serving reads(0), serving writes(0).
+Channel_29: serving reads(0), serving writes(0).
+Channel_30: serving reads(0), serving writes(0).
+Channel_31: serving reads(0), serving writes(0).
+[RAMULATOR OUTPUT]
+----[REMAP OUTPUT]---
+*****HotAccess: 0
+*****CoolAccess: 10446341
+*****RemapAccess: 165788
+---------------------
+
+ ***** [REF/AC_Result] *****
+{Summary}: 6357251 Hot Accesses, 4541215 Cool Accesses.
+
+ ***** [REF/AC_Result] *****
+                     Power     Energy    Energy %
+  core-core         7.78 W     0.28  J     24.21%
+  core-ifetch       0.90 W     0.03  J      2.81%
+  core-alu          0.99 W     0.04  J      3.09%
+  core-int          1.08 W     0.04  J      3.37%
+  core-fp           2.14 W     0.08  J      6.65%
+  core-mem          1.12 W     0.04  J      3.49%
+  icache            0.47 W     0.02  J      1.47%
+  dcache            3.90 W     0.14  J     12.14%
+  dram             13.15 W     0.47  J     40.89%
+  other             0.61 W     0.02  J      1.89%
+
+  core             14.03 W     0.50  J     43.62%
+  cache             4.38 W     0.16  J     13.61%
+  total            32.16 W     1.15  J    100.00%
+Warning: Unable to run gnuplot to create cpi stack graphs.  Maybe gnuplot is not installed?
+[SNIPER] End
+[SNIPER] Elapsed time: 2840.60 seconds
+[SNIPER] Running McPAT
+                                     | Core 0     | Core 1     | Core 2     | Core 3    
+  Instructions                       |  239660385 |  209618799 |  194566915 |  199474049
+  Cycles                             |   95105789 |   95105789 |   95105789 |   95105789
+  IPC                                |       2.52 |       2.20 |       2.05 |       2.10
+  Time (ns)                          |   35754056 |   35754056 |   35754056 |   35754056
+  Idle time (ns)                     |     507319 |     205120 |     454307 |     191578
+  Idle time (%)                      |       1.4% |       0.6% |       1.3% |       0.5%
+Branch predictor stats               |            |            |            |           
+  num correct                        |   24246457 |   14650474 |    6465192 |   12277222
+  num incorrect                      |     140274 |     150156 |     156689 |     134945
+  misprediction rate                 |      0.58% |      1.01% |      2.37% |      1.09%
+  mpki                               |       0.59 |       0.72 |       0.81 |       0.68
+TLB Summary                          |            |            |            |           
+  I-TLB                              |            |            |            |           
+    num accesses                     |   37890910 |   28206075 |   20687332 |   25472089
+    num misses                       |         12 |         47 |         47 |         47
+    miss rate                        |      0.00% |      0.00% |      0.00% |      0.00%
+    mpki                             |       0.00 |       0.00 |       0.00 |       0.00
+  D-TLB                              |            |            |            |           
+    num accesses                     |   90221173 |   79459722 |   76356722 |   76975308
+    num misses                       |      16016 |      19543 |      19452 |      18085
+    miss rate                        |      0.02% |      0.02% |      0.03% |      0.02%
+    mpki                             |       0.07 |       0.09 |       0.10 |       0.09
+  L2 TLB                             |            |            |            |           
+    num accesses                     |      16028 |      19590 |      19499 |      18132
+    num misses                       |       4346 |       5053 |       4722 |       4906
+    miss rate                        |     27.12% |     25.79% |     24.22% |     27.06%
+    mpki                             |       0.02 |       0.02 |       0.02 |       0.02
+Cache Summary                        |            |            |            |           
+  Cache L1-I                         |            |            |            |           
+    num cache accesses               |   37890910 |   28206075 |   20687332 |   25472089
+    num cache misses                 |      12676 |      12549 |      15377 |      12892
+    miss rate                        |      0.03% |      0.04% |      0.07% |      0.05%
+    mpki                             |       0.05 |       0.06 |       0.08 |       0.06
+  Cache L1-D                         |            |            |            |           
+    num cache accesses               |   90225112 |   79465825 |   76361035 |   76982899
+    num cache misses                 |    1150204 |    1213034 |    1256244 |    1240807
+    miss rate                        |      1.27% |      1.53% |      1.65% |      1.61%
+    mpki                             |       4.80 |       5.79 |       6.46 |       6.22
+  Cache L2                           |            |            |            |           
+    num cache accesses               |    1419510 |    1532432 |    1688308 |    1637413
+    num cache misses                 |     410088 |     504040 |     600007 |     587504
+    miss rate                        |     28.89% |     32.89% |     35.54% |     35.88%
+    mpki                             |       1.71 |       2.40 |       3.08 |       2.95
+DRAM summary                         |            |            |            |           
+  num dram accesses                  |    3564696 |          0 |          0 |          0
+  average dram access latency (ns)   |       7.48 |        inf |        inf |        inf
+  average dram queueing delay        |       0.00 |       0.00 |       0.00 |       0.00
+  average dram bandwidth utilization |      0.00% |      0.00% |      0.00% |      0.00%
+Coherency Traffic                    |            |            |            |           
+  num loads from dram                |     336706 |     402312 |     503800 |     483872
+  num loads from dram cache          |          0 |          0 |          0 |          0
+  num loads from remote cache        |      15637 |      29143 |      12537 |      21411
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.
+copy HotSpot and ramulator files to /scratch/miz087/results/hpca_final/7-22-test_cache_baseline_remap1g_splash2_cholesky_large
