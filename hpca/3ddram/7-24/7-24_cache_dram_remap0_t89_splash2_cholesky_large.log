@@ -1,0 +1,764 @@
+[Benchmarks] set sniper output to rundir:  /scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large
+/scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large
+[SPLASH] Benchmarks to run: cholesky
+
+[SPLASH] [========== Running benchmark cholesky ==========]
+[SPLASH] Setting up run directory: /scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large
+[SPLASH] Extracting output: gunzip < /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/cholesky/inputs/tk29.O.Z > /scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large/tk29.O
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large' -sthermalstats --power -c cache_dram_remap0 -g --perf_model/thermal/dram_temp_thres=89 -s stop-by-icount:5000000000 --roi --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks  --  /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/cholesky/CHOLESKY -p4 tk29.O':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+[DvfsManager] Core 0 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 1 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 2 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 3 at 2.66 GHz (global clock 2.66 GHz)
+Normal Cache Total set: 524288
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large/sim.scripts.py
+[STOPBYICOUNT] Waiting for application ROI
+[STOPBYICOUNT] Then stopping after simulating at least 5000000000 instructions in detail
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using Pin frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+Sparse Cholesky Factorization
+     Problem:         
+     4 Processors
+     Postpass partition size: 32
+     16384 byte cache
+
+
+true partitions
+Fan-out, no block copy-across
+LB domain, embedded distribution
+No ordering
+3231 supers, 4.33 nodes/super, 174 max super
+3231/1187 supers before/after
+393059150/405034303 (1.03) ops before/after amalgamation
+before partition
+Divide for 4 P, 138 domains, 0.57 of work static, 0.96 eff, (inf overall)
+419301 total domain updates
+1779 max height, 405034303 ops, 75891.76 conc, 137.74 bl for 4 P
+Target partition size 0, postpass size 32
+Processor array is 2 by 2
+No redistribution
+Supers: 60: 2  84: 1  111: 1  138: 1  168: 1  222: 1  546: 1  
+Blocks: 27: 1  28: 6  30: 4  31: 2  32: 20  33: 4  34: 5  35: 2  
+44 partitions
+44 partitions, 824 blocks
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+
+************recordStats once at 97885
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[STOPBYICOUNT] Application ROI started, now simulating 5000000000 in detail
+
+************recordStats once at 97885
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Setting instrumentation mode to DETAILED
+
+************recordStats once at 98801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+************recordStats once at 99801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 32.4883, Dynamic: 17.5601
+*[Hotspot] begin initialization!
+[DTM Trigger] CPU_MAX(THRES): 75.291(105.000), DRAM_MAX(THRES): 65.980(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 100799
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.6603, Dynamic: 22.2895
+[DTM Trigger] CPU_MAX(THRES): 84.091(105.000), DRAM_MAX(THRES): 68.604(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 101801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.6395, Dynamic: 21.614
+[DTM Trigger] CPU_MAX(THRES): 87.444(105.000), DRAM_MAX(THRES): 71.069(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 102801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.5402, Dynamic: 21.0783
+[DTM Trigger] CPU_MAX(THRES): 91.748(105.000), DRAM_MAX(THRES): 73.421(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 103801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.237, Dynamic: 19.1401
+[DTM Trigger] CPU_MAX(THRES): 92.938(105.000), DRAM_MAX(THRES): 75.517(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 104801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.0822, Dynamic: 20.8743
+[DTM Trigger] CPU_MAX(THRES): 95.715(105.000), DRAM_MAX(THRES): 77.305(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 105801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.3285, Dynamic: 19.3663
+[DTM Trigger] CPU_MAX(THRES): 96.920(105.000), DRAM_MAX(THRES): 78.935(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 106801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.5216, Dynamic: 20.1047
+[DTM Trigger] CPU_MAX(THRES): 99.610(105.000), DRAM_MAX(THRES): 80.379(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 107801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.7788, Dynamic: 19.6007
+[DTM Trigger] CPU_MAX(THRES): 100.783(105.000), DRAM_MAX(THRES): 81.724(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 108801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.1889, Dynamic: 18.9524
+[DTM Trigger] CPU_MAX(THRES): 101.501(105.000), DRAM_MAX(THRES): 82.985(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 109801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.3987, Dynamic: 20.9812
+[DTM Trigger] CPU_MAX(THRES): 100.942(105.000), DRAM_MAX(THRES): 84.020(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 110801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.2344, Dynamic: 20.3726
+[DTM Trigger] CPU_MAX(THRES): 102.334(105.000), DRAM_MAX(THRES): 85.066(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 21
+---invalid_cnt: 2048
+
+************recordStats once at 111801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.9293, Dynamic: 19.9367
+[DTM Trigger] CPU_MAX(THRES): 103.969(105.000), DRAM_MAX(THRES): 85.943(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 112801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.4534, Dynamic: 17.9017
+[DTM Trigger] CPU_MAX(THRES): 106.740(105.000), DRAM_MAX(THRES): 86.824(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 113801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.4631, Dynamic: 17.251
+[DTM Trigger] CPU_MAX(THRES): 107.184(105.000), DRAM_MAX(THRES): 87.647(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 64
+---invalid_cnt: 6144
+
+************recordStats once at 114801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 19.0704, Dynamic: 11.1839
+[DTM Trigger] CPU_MAX(THRES): 100.113(105.000), DRAM_MAX(THRES): 88.125(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 115801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 28.5351, Dynamic: 13.8441
+[DTM Trigger] CPU_MAX(THRES): 102.788(105.000), DRAM_MAX(THRES): 88.209(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 21
+---invalid_cnt: 2048
+
+************recordStats once at 116801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 32.393, Dynamic: 15.346
+[DTM Trigger] CPU_MAX(THRES): 103.923(105.000), DRAM_MAX(THRES): 88.413(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 107
+---invalid_cnt: 10240
+
+************recordStats once at 117801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.9458, Dynamic: 18.7824
+[DTM Trigger] CPU_MAX(THRES): 108.507(105.000), DRAM_MAX(THRES): 88.744(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 106
+---invalid_cnt: 10240
+
+************recordStats once at 118801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.1424, Dynamic: 18.0978
+[DTM Trigger] CPU_MAX(THRES): 107.198(105.000), DRAM_MAX(THRES): 89.231(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 298
+---invalid_cnt: 28672
+
+************recordStats once at 119769
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 18.1308, Dynamic: 11.5863
+[DTM Trigger] CPU_MAX(THRES): 100.055(105.000), DRAM_MAX(THRES): 89.568(89.000)
+	Current DTM method: 2
+[HOT!] DRAM is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1064 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 120792
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 10.5981, Dynamic: 8.58442
+[DTM Trigger] CPU_MAX(THRES): 94.532(105.000), DRAM_MAX(THRES): 86.647(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 121800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 13.6301, Dynamic: 7.73924
+[DTM Trigger] CPU_MAX(THRES): 93.790(105.000), DRAM_MAX(THRES): 88.329(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 122801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 24.8412, Dynamic: 13.2068
+[DTM Trigger] CPU_MAX(THRES): 99.109(105.000), DRAM_MAX(THRES): 88.328(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 123801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 32.7065, Dynamic: 17.6305
+[DTM Trigger] CPU_MAX(THRES): 104.452(105.000), DRAM_MAX(THRES): 88.454(89.000)
+	Current DTM method: 2
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 124800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.3799, Dynamic: 21.6371
+[DTM Trigger] CPU_MAX(THRES): 107.487(105.000), DRAM_MAX(THRES): 88.798(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 128
+---invalid_cnt: 26624
+
+************recordStats once at 125801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.9985, Dynamic: 22.1864
+[DTM Trigger] CPU_MAX(THRES): 107.724(105.000), DRAM_MAX(THRES): 89.351(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 63
+---invalid_cnt: 6144
+
+************recordStats once at 126801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 20.3236, Dynamic: 13.3033
+[DTM Trigger] CPU_MAX(THRES): 101.781(105.000), DRAM_MAX(THRES): 89.683(89.000)
+	Current DTM method: 2
+[HOT!] DRAM is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1064 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 63
+---invalid_cnt: 6144
+
+************recordStats once at 127801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 12.9991, Dynamic: 9.7005
+[DTM Trigger] CPU_MAX(THRES): 96.989(105.000), DRAM_MAX(THRES): 87.812(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 128801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 14.7055, Dynamic: 7.92605
+[DTM Trigger] CPU_MAX(THRES): 96.512(105.000), DRAM_MAX(THRES): 88.844(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 129801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 27.8208, Dynamic: 14.9614
+[DTM Trigger] CPU_MAX(THRES): 100.786(105.000), DRAM_MAX(THRES): 88.752(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 130800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.4612, Dynamic: 18.1134
+[DTM Trigger] CPU_MAX(THRES): 105.307(105.000), DRAM_MAX(THRES): 88.930(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 131800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.7156, Dynamic: 21.7094
+[DTM Trigger] CPU_MAX(THRES): 108.082(105.000), DRAM_MAX(THRES): 89.362(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 132801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 20.3616, Dynamic: 13.6465
+[DTM Trigger] CPU_MAX(THRES): 101.943(105.000), DRAM_MAX(THRES): 89.665(89.000)
+	Current DTM method: 2
+[HOT!] DRAM is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1064 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 42
+---invalid_cnt: 4096
+
+************recordStats once at 133800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 13.1173, Dynamic: 9.78931
+[DTM Trigger] CPU_MAX(THRES): 97.152(105.000), DRAM_MAX(THRES): 89.608(89.000)
+	Current DTM method: 2
+[HOT!] DRAM is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 532 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 532 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 532 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 532 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 134800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 6.99029, Dynamic: 6.70202
+[DTM Trigger] CPU_MAX(THRES): 92.870(105.000), DRAM_MAX(THRES): 87.295(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1064 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1064 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 135800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 8.82992, Dynamic: 4.88382
+[DTM Trigger] CPU_MAX(THRES): 92.362(105.000), DRAM_MAX(THRES): 87.754(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 136801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 16.0411, Dynamic: 8.5501
+[DTM Trigger] CPU_MAX(THRES): 94.250(105.000), DRAM_MAX(THRES): 87.841(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 137801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.9212, Dynamic: 16.2957
+[DTM Trigger] CPU_MAX(THRES): 101.183(105.000), DRAM_MAX(THRES): 87.748(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+---invalid_cnt: 0
+
+************recordStats once at 138801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.2651, Dynamic: 19.682
+[DTM Trigger] CPU_MAX(THRES): 106.755(105.000), DRAM_MAX(THRES): 88.072(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 47
+---invalid_cnt: 20480
+
+************recordStats once at 139797
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.1107, Dynamic: 23.2694
+[DTM Trigger] CPU_MAX(THRES): 108.090(105.000), DRAM_MAX(THRES): 87.792(89.000)
+	Current DTM method: 2
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 61
+---invalid_cnt: 26624
+
+************recordStats once at 140795
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 20.272, Dynamic: 14.0308
+[DTM Trigger] CPU_MAX(THRES): 101.831(105.000), DRAM_MAX(THRES): 87.412(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+-----and here we finish handling remapping results in cache controller! the Latency: 4
+---invalid_cnt: 2048
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 2965.54 seconds
+
+************recordStats once at 140936
+
+************recordStats once at 140936
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 26.8082, Dynamic: 14.9862
+[DTM Trigger] CPU_MAX(THRES): 102.814(105.000), DRAM_MAX(THRES): 87.122(89.000)
+	Current DTM method: 2
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 23.7349, Dynamic: 9.54127
+[DTM Trigger] CPU_MAX(THRES): 101.211(105.000), DRAM_MAX(THRES): 86.958(89.000)
+	Current DTM method: 2
+Here we try remapping!
+[SNIPER] Simulated 846.0M instructions, 374.9M cycles, 2.26 IPC
+[SNIPER] Simulation speed 282.7 KIPS (70.7 KIPS / target core - 14147.7ns/instr)
+[SNIPER] Sampling: executed 30.44% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[HOOKS] Leaving ROI
+405034303 operations for factorization
+
+                            PROCESS STATISTICS
+              Total
+ Proc         Time 
+    0    -1428394450
+                            TIMING INFORMATION
+Start time                        :       2098761290
+Initialization finish time        :      -1381289715
+Overall finish time               :       1485283131
+Total time with initialization    :       -613478159
+Total time without initialization :      -1428394450
+
+
+************recordStats once at 140936
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 23.7349, Dynamic: 9.54127
+[DTM Trigger] CPU_MAX(THRES): 101.438(105.000), DRAM_MAX(THRES): 86.804(89.000)
+	Current DTM method: 2
+Here we try remapping!
+
+ ***** [DRAM_CACHE_Result] *****
+
+*** DRAM Total Access: 5321163, page miss: 107167, block misses: 181906, miss: 289073, miss rate: 0.0543252
+*** DRAM Total Access In ROI: 3111228, miss: 192623, miss rate: 0.0619122
+*** DRAM Remap Times: 151552 invalid times, 83633 total invalid_blocks, 0 migrate times, 0 total migrate blocks.
+*** DRAM Statistics: 270164546 reads, 79332107 writes, 188775225 row hits, 16493585 ACT time, 16493585 PRE time, 6402898 RD time, 1843893 WR time.
+
+ ***** [DRAM_CACHE_Result] *****
+
+[RAMULATOR OUTPUT]
+
+**Total Ticks: 172628338
+
+**Ramulator Active Cycles: 1.09887e+08
+
+**DRAM Cycles: 1.72628e+08
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 1.04595e+07
+
+**Serving Request**
+Channel_0: serving reads(7225365), serving writes(2106342).
+Channel_1: serving reads(0), serving writes(0).
+Channel_2: serving reads(0), serving writes(0).
+Channel_3: serving reads(0), serving writes(0).
+Channel_4: serving reads(0), serving writes(0).
+Channel_5: serving reads(0), serving writes(0).
+Channel_6: serving reads(0), serving writes(0).
+Channel_7: serving reads(0), serving writes(0).
+Channel_8: serving reads(0), serving writes(0).
+Channel_9: serving reads(0), serving writes(0).
+Channel_10: serving reads(0), serving writes(0).
+Channel_11: serving reads(0), serving writes(0).
+Channel_12: serving reads(0), serving writes(0).
+Channel_13: serving reads(0), serving writes(0).
+Channel_14: serving reads(0), serving writes(0).
+Channel_15: serving reads(0), serving writes(0).
+Channel_16: serving reads(0), serving writes(0).
+Channel_17: serving reads(0), serving writes(0).
+Channel_18: serving reads(0), serving writes(0).
+Channel_19: serving reads(0), serving writes(0).
+Channel_20: serving reads(0), serving writes(0).
+Channel_21: serving reads(0), serving writes(0).
+Channel_22: serving reads(0), serving writes(0).
+Channel_23: serving reads(0), serving writes(0).
+Channel_24: serving reads(0), serving writes(0).
+Channel_25: serving reads(0), serving writes(0).
+Channel_26: serving reads(0), serving writes(0).
+Channel_27: serving reads(0), serving writes(0).
+Channel_28: serving reads(0), serving writes(0).
+Channel_29: serving reads(0), serving writes(0).
+Channel_30: serving reads(0), serving writes(0).
+Channel_31: serving reads(0), serving writes(0).
+[RAMULATOR OUTPUT]
+----[REMAP OUTPUT]---
+*****HotAccess: 0
+*****CoolAccess: 10297206
+*****RemapAccess: 162278
+---------------------
+
+ ***** [REF/AC_Result] *****
+{Summary}: 6100429 Hot Accesses, 4541974 Cool Accesses.
+
+ ***** [REF/AC_Result] *****
+                     Power     Energy    Energy %
+  core-core         6.48 W     0.28  J     23.24%
+  core-ifetch       0.77 W     0.03  J      2.75%
+  core-alu          0.92 W     0.04  J      3.31%
+  core-int          0.96 W     0.04  J      3.43%
+  core-fp           1.93 W     0.08  J      6.91%
+  core-mem          0.93 W     0.04  J      3.35%
+  icache            0.40 W     0.02  J      1.45%
+  dcache            3.27 W     0.14  J     11.71%
+  dram             11.65 W     0.50  J     41.78%
+  other             0.58 W     0.02  J      2.07%
+
+  core             11.99 W     0.52  J     42.99%
+  cache             3.67 W     0.16  J     13.16%
+  total            27.88 W     1.20  J    100.00%
+Warning: Unable to run gnuplot to create cpi stack graphs.  Maybe gnuplot is not installed?
+[SNIPER] End
+[SNIPER] Elapsed time: 3738.74 seconds
+[SNIPER] Running McPAT
+                                     | Core 0     | Core 1     | Core 2     | Core 3    
+  Instructions                       |  235183248 |  210620931 |  195611638 |  204625263
+  Cycles                             |  114740181 |  114740181 |  114740181 |  114740181
+  IPC                                |       2.05 |       1.84 |       1.70 |       1.78
+  Time (ns)                          |   43135407 |   43135407 |   43135407 |   43135407
+  Idle time (ns)                     |     297657 |     269446 |     235520 |     264007
+  Idle time (%)                      |       0.7% |       0.6% |       0.5% |       0.6%
+Branch predictor stats               |            |            |            |           
+  num correct                        |   22753951 |   14984674 |    6811737 |   13994034
+  num incorrect                      |     140313 |     150021 |     158776 |     135010
+  misprediction rate                 |      0.61% |      0.99% |      2.28% |      0.96%
+  mpki                               |       0.60 |       0.71 |       0.81 |       0.66
+TLB Summary                          |            |            |            |           
+  I-TLB                              |            |            |            |           
+    num accesses                     |   36398531 |   28540151 |   21035940 |   27188950
+    num misses                       |         12 |         47 |         47 |         47
+    miss rate                        |      0.00% |      0.00% |      0.00% |      0.00%
+    mpki                             |       0.00 |       0.00 |       0.00 |       0.00
+  D-TLB                              |            |            |            |           
+    num accesses                     |   88728831 |   79793786 |   76704846 |   78692470
+    num misses                       |      16566 |      17898 |      20363 |      18494
+    miss rate                        |      0.02% |      0.02% |      0.03% |      0.02%
+    mpki                             |       0.07 |       0.08 |       0.10 |       0.09
+  L2 TLB                             |            |            |            |           
+    num accesses                     |      16578 |      17945 |      20410 |      18541
+    num misses                       |       4272 |       4987 |       4815 |       5036
+    miss rate                        |     25.77% |     27.79% |     23.59% |     27.16%
+    mpki                             |       0.02 |       0.02 |       0.02 |       0.02
+Cache Summary                        |            |            |            |           
+  Cache L1-I                         |            |            |            |           
+    num cache accesses               |   36398531 |   28540151 |   21035940 |   27188950
+    num cache misses                 |      12917 |      12605 |      14764 |      13978
+    miss rate                        |      0.04% |      0.04% |      0.07% |      0.05%
+    mpki                             |       0.05 |       0.06 |       0.08 |       0.07
+  Cache L1-D                         |            |            |            |           
+    num cache accesses               |   88732786 |   79799892 |   76709161 |   78700050
+    num cache misses                 |    1150291 |    1214216 |    1256175 |    1244799
+    miss rate                        |      1.30% |      1.52% |      1.64% |      1.58%
+    mpki                             |       4.89 |       5.76 |       6.42 |       6.08
+  Cache L2                           |            |            |            |           
+    num cache accesses               |    1421361 |    1535577 |    1689129 |    1642525
+    num cache misses                 |     411166 |     505505 |     601350 |     588100
+    miss rate                        |     28.93% |     32.92% |     35.60% |     35.80%
+    mpki                             |       1.75 |       2.40 |       3.07 |       2.87
+DRAM summary                         |            |            |            |           
+  num dram accesses                  |    3574462 |          0 |          0 |          0
+  average dram access latency (ns)   |       7.69 |        inf |        inf |        inf
+  average dram queueing delay        |       0.00 |       0.00 |       0.00 |       0.00
+  average dram bandwidth utilization |      0.00% |      0.00% |      0.00% |      0.00%
+Coherency Traffic                    |            |            |            |           
+  num loads from dram                |     339205 |     405513 |     507220 |     479246
+  num loads from dram cache          |          0 |          0 |          0 |          0
+  num loads from remote cache        |      14003 |      27322 |      11056 |      25720
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.
+copy HotSpot and ramulator files to /scratch/miz087/results/hpca_final/7-24_cache_dram_remap0_t89_splash2_cholesky_large
