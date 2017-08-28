@@ -1,0 +1,40 @@
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using Pin frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+Read Time:           53.33447
+Build Time:          2.42758
+Graph has 5363261 nodes and 77991514 directed edges for degree: 14
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[VertexProgram] Iteration: 0
+We have checked 1 active verteces!
+[VertexProgram] Iteration: 1
+We have checked 1 active verteces!
+[VertexProgram] Iteration: 2
+Application received fatal signal 11 at eip 0x404ee9
+in /home/zmac/graph_processing/sniper/graph_processing/graph_pim/src/sssp_pim.cc:138
+
+Application debugging is currently disabled.
+To enable it, start Sniper with the --appdebug or --appdebug-wait command line switch.
+
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/Date/tools/mcpat.py", line 1304, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/Date/tools/mcpat.py", line 130, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/Date/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/Date/tools/sniper_lib.py", line 179, in parse_results_from_dir
+    results += stats.parse_stats((k1, k2), ncores, metrics = metrics)
+  File "/home_masters/miz087/workplace/Date/tools/sniper_stats.py", line 8, in parse_stats
+    v2 = self.read_snapshot(k2, metrics = metrics)
+  File "/home_masters/miz087/workplace/Date/tools/sniper_stats_sqlite.py", line 44, in read_snapshot
+    raise ValueError('Invalid prefix %s' % prefix)
+ValueError: Invalid prefix roi-end
+[SNIPER] End
+[SNIPER] Elapsed time: 64885.71 seconds
+[SNIPER] Running McPAT
