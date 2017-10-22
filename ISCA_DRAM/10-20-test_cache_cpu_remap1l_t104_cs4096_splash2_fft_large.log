@@ -1,0 +1,5107 @@
+[Benchmarks] set sniper output to rundir:  /scratch/miz087/results/isca/10-20-test_cache_cpu_remap1l_t104_cs4096_splash2_fft_large
+/scratch/miz087/results/isca/10-20-test_cache_cpu_remap1l_t104_cs4096_splash2_fft_large
+[SPLASH] Benchmarks to run: fft
+
+[SPLASH] [========== Running benchmark fft ==========]
+[SPLASH] Setting up run directory: /scratch/miz087/results/isca/10-20-test_cache_cpu_remap1l_t104_cs4096_splash2_fft_large
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/isca/10-20-test_cache_cpu_remap1l_t104_cs4096_splash2_fft_large' -sthermalstats --power -c cache_cpu_remap1l -g --perf_model/dram_cache/cache_size=4096 -g --perf_model/thermal/cpu_temp_thres=104 -g --perf_model/remap_config/on_chip_wb=false -s stop-by-icount:5000000000 --roi --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks  --  /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/fft/FFT -m22 -p4':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+[DvfsManager] Core 0 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 1 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 2 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 3 at 2.66 GHz (global clock 2.66 GHz)
+Normal Cache Total set: 524288
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+32 4 2 2048 8192 
+Here we initilize a off-chip model!
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+1 1 32 16384 8192 
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/isca/10-20-test_cache_cpu_remap1l_t104_cs4096_splash2_fft_large/sim.scripts.py
+[STOPBYICOUNT] Waiting for application ROI
+[STOPBYICOUNT] Then stopping after simulating at least 5000000000 instructions in detail
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using Pin frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+FFT with Blocking Transpose
+   4194304 Complex Doubles
+   4 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+
+************recordStats once at 530325
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[STOPBYICOUNT] Application ROI started, now simulating 5000000000 in detail
+
+************recordStats once at 530325
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Setting instrumentation mode to DETAILED
+
+************recordStats once at 531226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+************recordStats once at 532226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.6213, Dynamic: 14.0534
+*[Hotspot] begin initialization!
+[DTM Trigger] CPU_MAX(THRES): 72.778(104.000), DRAM_MAX(THRES): 62.987(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 533226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.6345, Dynamic: 15.3982
+[DTM Trigger] CPU_MAX(THRES): 78.929(104.000), DRAM_MAX(THRES): 66.369(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 534226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.3196, Dynamic: 16.2895
+[DTM Trigger] CPU_MAX(THRES): 83.207(104.000), DRAM_MAX(THRES): 68.772(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 535226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.763, Dynamic: 20.1459
+[DTM Trigger] CPU_MAX(THRES): 87.849(104.000), DRAM_MAX(THRES): 70.343(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 536226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.7725, Dynamic: 20.1271
+[DTM Trigger] CPU_MAX(THRES): 90.377(104.000), DRAM_MAX(THRES): 72.513(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 537226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.8618, Dynamic: 20.1959
+[DTM Trigger] CPU_MAX(THRES): 93.022(104.000), DRAM_MAX(THRES): 74.639(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 538226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.7966, Dynamic: 20.1695
+[DTM Trigger] CPU_MAX(THRES): 95.167(104.000), DRAM_MAX(THRES): 76.382(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 539226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.7693, Dynamic: 20.133
+[DTM Trigger] CPU_MAX(THRES): 97.072(104.000), DRAM_MAX(THRES): 77.887(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 540226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.904, Dynamic: 20.23
+[DTM Trigger] CPU_MAX(THRES): 98.726(104.000), DRAM_MAX(THRES): 79.220(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 541226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.8672, Dynamic: 20.2234
+[DTM Trigger] CPU_MAX(THRES): 100.186(104.000), DRAM_MAX(THRES): 80.409(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 542226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.7752, Dynamic: 20.1382
+[DTM Trigger] CPU_MAX(THRES): 101.508(104.000), DRAM_MAX(THRES): 81.481(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 543226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.892, Dynamic: 20.2104
+[DTM Trigger] CPU_MAX(THRES): 102.643(104.000), DRAM_MAX(THRES): 82.447(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 544226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.8271, Dynamic: 20.1705
+[DTM Trigger] CPU_MAX(THRES): 103.643(104.000), DRAM_MAX(THRES): 83.316(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 545226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.752, Dynamic: 20.0964
+[DTM Trigger] CPU_MAX(THRES): 104.634(104.000), DRAM_MAX(THRES): 84.110(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 546226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.5286, Dynamic: 20.221
+[DTM Trigger] CPU_MAX(THRES): 103.839(104.000), DRAM_MAX(THRES): 84.669(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 547226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.1971, Dynamic: 17.1265
+[DTM Trigger] CPU_MAX(THRES): 104.352(104.000), DRAM_MAX(THRES): 85.107(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 176466
+Bus Delay: 103393, Process Latency: 73073
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 548226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.3964, Dynamic: 20.1224
+[DTM Trigger] CPU_MAX(THRES): 104.726(104.000), DRAM_MAX(THRES): 85.554(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 176523
+Bus Delay: 103402, Process Latency: 73121
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 549227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.6466, Dynamic: 12.0299
+[DTM Trigger] CPU_MAX(THRES): 98.591(104.000), DRAM_MAX(THRES): 85.247(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 550226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.0344, Dynamic: 13.9163
+[DTM Trigger] CPU_MAX(THRES): 99.943(104.000), DRAM_MAX(THRES): 84.948(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 551226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.1998, Dynamic: 17.1211
+[DTM Trigger] CPU_MAX(THRES): 103.975(104.000), DRAM_MAX(THRES): 85.491(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 552226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.6928, Dynamic: 20.0506
+[DTM Trigger] CPU_MAX(THRES): 106.914(104.000), DRAM_MAX(THRES): 86.306(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 1237415
+Bus Delay: 724892, Process Latency: 512523
+---invalid_cnt: 14336, total: 524288
+
+************recordStats once at 553467
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.454, Dynamic: 20.1459
+[DTM Trigger] CPU_MAX(THRES): 106.483(104.000), DRAM_MAX(THRES): 86.992(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 1944238
+Bus Delay: 1138947, Process Latency: 805291
+---invalid_cnt: 22528, total: 524288
+
+************recordStats once at 555173
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 15.0681, Dynamic: 9.82166
+[DTM Trigger] CPU_MAX(THRES): 100.808(104.000), DRAM_MAX(THRES): 86.774(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 177011
+Bus Delay: 103705, Process Latency: 73306
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 555227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 21.1449, Dynamic: 10.9743
+[DTM Trigger] CPU_MAX(THRES): 102.491(104.000), DRAM_MAX(THRES): 86.504(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 556221
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 26.5864, Dynamic: 13.3862
+[DTM Trigger] CPU_MAX(THRES): 106.962(104.000), DRAM_MAX(THRES): 87.014(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 557223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.0236, Dynamic: 19.725
+[DTM Trigger] CPU_MAX(THRES): 106.873(104.000), DRAM_MAX(THRES): 87.550(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 353868
+Bus Delay: 207309, Process Latency: 146559
+---invalid_cnt: 4096, total: 524288
+
+************recordStats once at 558226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.8198, Dynamic: 12.2316
+[DTM Trigger] CPU_MAX(THRES): 100.496(104.000), DRAM_MAX(THRES): 87.127(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 559227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 24.4258, Dynamic: 13.2295
+[DTM Trigger] CPU_MAX(THRES): 102.082(104.000), DRAM_MAX(THRES): 86.688(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 560223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.1805, Dynamic: 17.0632
+[DTM Trigger] CPU_MAX(THRES): 105.780(104.000), DRAM_MAX(THRES): 87.055(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 15213
+Bus Delay: 2812, Process Latency: 12400
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 561226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.9564, Dynamic: 19.6455
+[DTM Trigger] CPU_MAX(THRES): 106.562(104.000), DRAM_MAX(THRES): 87.579(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 1080157
+Bus Delay: 626804, Process Latency: 453353
+---invalid_cnt: 14336, total: 524288
+
+************recordStats once at 562309
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.9319, Dynamic: 12.3241
+[DTM Trigger] CPU_MAX(THRES): 100.759(104.000), DRAM_MAX(THRES): 87.312(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 563226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 21.656, Dynamic: 11.5732
+[DTM Trigger] CPU_MAX(THRES): 102.494(104.000), DRAM_MAX(THRES): 86.956(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 564227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.6631, Dynamic: 16.5539
+[DTM Trigger] CPU_MAX(THRES): 106.184(104.000), DRAM_MAX(THRES): 87.385(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 565226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.0744, Dynamic: 19.6626
+[DTM Trigger] CPU_MAX(THRES): 106.907(104.000), DRAM_MAX(THRES): 87.908(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 884737
+Bus Delay: 518324, Process Latency: 366413
+---invalid_cnt: 10240, total: 524288
+
+************recordStats once at 566200
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.7078, Dynamic: 12.1838
+[DTM Trigger] CPU_MAX(THRES): 101.214(104.000), DRAM_MAX(THRES): 87.617(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 567226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1913, Dynamic: 14.0935
+[DTM Trigger] CPU_MAX(THRES): 102.292(104.000), DRAM_MAX(THRES): 87.226(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 568226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.0269, Dynamic: 16.8368
+[DTM Trigger] CPU_MAX(THRES): 105.960(104.000), DRAM_MAX(THRES): 87.566(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 176622
+Bus Delay: 103469, Process Latency: 73153
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 569226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.8952, Dynamic: 19.5555
+[DTM Trigger] CPU_MAX(THRES): 107.374(104.000), DRAM_MAX(THRES): 88.137(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 1768542
+Bus Delay: 1036067, Process Latency: 732475
+---invalid_cnt: 20480, total: 524288
+
+************recordStats once at 570997
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.2306, Dynamic: 11.6197
+[DTM Trigger] CPU_MAX(THRES): 101.656(104.000), DRAM_MAX(THRES): 87.880(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 529859
+Bus Delay: 310383, Process Latency: 219476
+---invalid_cnt: 6144, total: 524288
+
+************recordStats once at 571226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 21.6766, Dynamic: 11.6095
+[DTM Trigger] CPU_MAX(THRES): 102.724(104.000), DRAM_MAX(THRES): 87.362(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 572226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 26.268, Dynamic: 12.3415
+[DTM Trigger] CPU_MAX(THRES): 108.446(104.000), DRAM_MAX(THRES): 88.036(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 573226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.6572, Dynamic: 19.253
+[DTM Trigger] CPU_MAX(THRES): 107.892(104.000), DRAM_MAX(THRES): 88.659(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 502238
+Bus Delay: 293204, Process Latency: 209034
+---invalid_cnt: 6144, total: 524288
+
+************recordStats once at 574226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.6633, Dynamic: 12.0681
+[DTM Trigger] CPU_MAX(THRES): 101.640(104.000), DRAM_MAX(THRES): 88.201(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 153317
+Bus Delay: 88926, Process Latency: 64391
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 575226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 23.7987, Dynamic: 12.4028
+[DTM Trigger] CPU_MAX(THRES): 103.535(104.000), DRAM_MAX(THRES): 87.767(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 576226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.3911, Dynamic: 16.1971
+[DTM Trigger] CPU_MAX(THRES): 106.783(104.000), DRAM_MAX(THRES): 87.850(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 15354
+Bus Delay: 2879, Process Latency: 12474
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 577227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.514, Dynamic: 19.0686
+[DTM Trigger] CPU_MAX(THRES): 107.041(104.000), DRAM_MAX(THRES): 88.342(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 176942
+Bus Delay: 103663, Process Latency: 73279
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 578224
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.4779, Dynamic: 11.8583
+[DTM Trigger] CPU_MAX(THRES): 101.537(104.000), DRAM_MAX(THRES): 88.106(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 579219
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 24.61, Dynamic: 13.4681
+[DTM Trigger] CPU_MAX(THRES): 103.145(104.000), DRAM_MAX(THRES): 87.797(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 580207
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 27.2703, Dynamic: 13.6882
+[DTM Trigger] CPU_MAX(THRES): 107.661(104.000), DRAM_MAX(THRES): 88.270(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 581226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 22.9508, Dynamic: 12.8405
+[DTM Trigger] CPU_MAX(THRES): 110.122(104.000), DRAM_MAX(THRES): 89.062(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 353449
+Bus Delay: 207048, Process Latency: 146401
+---invalid_cnt: 4096, total: 524288
+
+************recordStats once at 582227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 11.8547, Dynamic: 7.08927
+[DTM Trigger] CPU_MAX(THRES): 103.943(104.000), DRAM_MAX(THRES): 88.843(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 583227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 18.1381, Dynamic: 7.25913
+[DTM Trigger] CPU_MAX(THRES): 100.877(104.000), DRAM_MAX(THRES): 87.812(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 584227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 27.7577, Dynamic: 12.5185
+[DTM Trigger] CPU_MAX(THRES): 99.257(104.000), DRAM_MAX(THRES): 87.103(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 585227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.0646, Dynamic: 13.5684
+[DTM Trigger] CPU_MAX(THRES): 101.444(104.000), DRAM_MAX(THRES): 86.859(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 555895
+Bus Delay: 306627, Process Latency: 249268
+---invalid_cnt: 12288, total: 524288
+
+************recordStats once at 586220
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 29.7233, Dynamic: 14.4351
+[DTM Trigger] CPU_MAX(THRES): 104.190(104.000), DRAM_MAX(THRES): 87.025(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 150088
+Bus Delay: 80269, Process Latency: 69819
+---invalid_cnt: 4096, total: 524288
+
+************recordStats once at 587216
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 28.808, Dynamic: 17.9569
+[DTM Trigger] CPU_MAX(THRES): 108.126(104.000), DRAM_MAX(THRES): 87.416(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 1095942
+Bus Delay: 623385, Process Latency: 472557
+---invalid_cnt: 18432, total: 524288
+
+************recordStats once at 588332
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.6871, Dynamic: 12.4864
+[DTM Trigger] CPU_MAX(THRES): 101.500(104.000), DRAM_MAX(THRES): 87.589(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 589226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 21.7618, Dynamic: 11.9266
+[DTM Trigger] CPU_MAX(THRES): 104.150(104.000), DRAM_MAX(THRES): 87.725(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 590226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.6943, Dynamic: 12.5245
+[DTM Trigger] CPU_MAX(THRES): 101.079(104.000), DRAM_MAX(THRES): 87.674(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 591223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1139, Dynamic: 14.4097
+[DTM Trigger] CPU_MAX(THRES): 102.936(104.000), DRAM_MAX(THRES): 87.574(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 592227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.3244, Dynamic: 17.7525
+[DTM Trigger] CPU_MAX(THRES): 107.312(104.000), DRAM_MAX(THRES): 88.099(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 593226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.4578, Dynamic: 20.7984
+[DTM Trigger] CPU_MAX(THRES): 108.481(104.000), DRAM_MAX(THRES): 88.765(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 43953
+Bus Delay: 20732, Process Latency: 23220
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 594213
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.9237, Dynamic: 12.7697
+[DTM Trigger] CPU_MAX(THRES): 102.556(104.000), DRAM_MAX(THRES): 88.559(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 595223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1956, Dynamic: 14.5256
+[DTM Trigger] CPU_MAX(THRES): 104.090(104.000), DRAM_MAX(THRES): 88.251(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 596214
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.8277, Dynamic: 12.7018
+[DTM Trigger] CPU_MAX(THRES): 101.337(104.000), DRAM_MAX(THRES): 87.991(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 597226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.2541, Dynamic: 14.5375
+[DTM Trigger] CPU_MAX(THRES): 103.478(104.000), DRAM_MAX(THRES): 87.883(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 598223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.3909, Dynamic: 17.7845
+[DTM Trigger] CPU_MAX(THRES): 107.655(104.000), DRAM_MAX(THRES): 88.431(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 599226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.5075, Dynamic: 20.87
+[DTM Trigger] CPU_MAX(THRES): 109.024(104.000), DRAM_MAX(THRES): 89.107(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 50339
+Bus Delay: 24715, Process Latency: 25623
+---invalid_cnt: 2048, total: 524288
+
+************recordStats once at 600226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.84, Dynamic: 12.7112
+[DTM Trigger] CPU_MAX(THRES): 103.034(104.000), DRAM_MAX(THRES): 88.910(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 601226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.0215, Dynamic: 14.2827
+[DTM Trigger] CPU_MAX(THRES): 104.377(104.000), DRAM_MAX(THRES): 88.547(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 602226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.9437, Dynamic: 12.8064
+[DTM Trigger] CPU_MAX(THRES): 101.686(104.000), DRAM_MAX(THRES): 88.259(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 603226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.3197, Dynamic: 14.5795
+[DTM Trigger] CPU_MAX(THRES): 103.866(104.000), DRAM_MAX(THRES): 88.141(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 604226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.1779, Dynamic: 17.6235
+[DTM Trigger] CPU_MAX(THRES): 107.792(104.000), DRAM_MAX(THRES): 88.655(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 605226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.5438, Dynamic: 20.8814
+[DTM Trigger] CPU_MAX(THRES): 109.146(104.000), DRAM_MAX(THRES): 89.298(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 606226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.8361, Dynamic: 12.6916
+[DTM Trigger] CPU_MAX(THRES): 103.174(104.000), DRAM_MAX(THRES): 89.084(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 607224
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.2002, Dynamic: 14.5349
+[DTM Trigger] CPU_MAX(THRES): 104.682(104.000), DRAM_MAX(THRES): 88.736(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 608226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.9015, Dynamic: 12.7467
+[DTM Trigger] CPU_MAX(THRES): 101.944(104.000), DRAM_MAX(THRES): 88.448(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 609223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1824, Dynamic: 14.4305
+[DTM Trigger] CPU_MAX(THRES): 103.736(104.000), DRAM_MAX(THRES): 88.285(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 610226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.1531, Dynamic: 17.5766
+[DTM Trigger] CPU_MAX(THRES): 107.860(104.000), DRAM_MAX(THRES): 88.772(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 611227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.4857, Dynamic: 20.8057
+[DTM Trigger] CPU_MAX(THRES): 109.336(104.000), DRAM_MAX(THRES): 89.425(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 612226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.9677, Dynamic: 12.8506
+[DTM Trigger] CPU_MAX(THRES): 103.434(104.000), DRAM_MAX(THRES): 89.226(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 613210
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.0291, Dynamic: 14.3173
+[DTM Trigger] CPU_MAX(THRES): 104.709(104.000), DRAM_MAX(THRES): 88.864(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 614222
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.7943, Dynamic: 12.6717
+[DTM Trigger] CPU_MAX(THRES): 101.879(104.000), DRAM_MAX(THRES): 88.548(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 615219
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.3688, Dynamic: 14.6421
+[DTM Trigger] CPU_MAX(THRES): 104.128(104.000), DRAM_MAX(THRES): 88.406(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 616227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.9098, Dynamic: 12.773
+[DTM Trigger] CPU_MAX(THRES): 101.500(104.000), DRAM_MAX(THRES): 88.238(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 617226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1532, Dynamic: 14.3923
+[DTM Trigger] CPU_MAX(THRES): 103.577(104.000), DRAM_MAX(THRES): 88.149(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 618226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.1953, Dynamic: 17.6277
+[DTM Trigger] CPU_MAX(THRES): 108.212(104.000), DRAM_MAX(THRES): 88.734(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 619222
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.2919, Dynamic: 20.6027
+[DTM Trigger] CPU_MAX(THRES): 109.053(104.000), DRAM_MAX(THRES): 89.394(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 620226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 18.0119, Dynamic: 12.9021
+[DTM Trigger] CPU_MAX(THRES): 103.357(104.000), DRAM_MAX(THRES): 89.181(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 621226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1687, Dynamic: 14.4265
+[DTM Trigger] CPU_MAX(THRES): 104.579(104.000), DRAM_MAX(THRES): 88.829(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 622226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.8325, Dynamic: 12.6984
+[DTM Trigger] CPU_MAX(THRES): 101.858(104.000), DRAM_MAX(THRES): 88.525(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 623223
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.2775, Dynamic: 14.5604
+[DTM Trigger] CPU_MAX(THRES): 104.025(104.000), DRAM_MAX(THRES): 88.388(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 624209
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.7904, Dynamic: 12.6583
+[DTM Trigger] CPU_MAX(THRES): 101.469(104.000), DRAM_MAX(THRES): 88.226(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 625227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.1246, Dynamic: 14.3934
+[DTM Trigger] CPU_MAX(THRES): 103.592(104.000), DRAM_MAX(THRES): 88.150(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 626226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 31.3476, Dynamic: 17.7604
+[DTM Trigger] CPU_MAX(THRES): 108.130(104.000), DRAM_MAX(THRES): 88.735(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 627227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 30.5053, Dynamic: 20.8176
+[DTM Trigger] CPU_MAX(THRES): 109.310(104.000), DRAM_MAX(THRES): 89.427(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 628215
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 17.8785, Dynamic: 12.7535
+[DTM Trigger] CPU_MAX(THRES): 103.268(104.000), DRAM_MAX(THRES): 89.217(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 629219
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.0834, Dynamic: 14.3579
+[DTM Trigger] CPU_MAX(THRES): 104.460(104.000), DRAM_MAX(THRES): 88.837(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 630180
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 14.9828, Dynamic: 10.1067
+[DTM Trigger] CPU_MAX(THRES): 102.305(104.000), DRAM_MAX(THRES): 88.577(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 631226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 21.1591, Dynamic: 11.1397
+[DTM Trigger] CPU_MAX(THRES): 105.390(104.000), DRAM_MAX(THRES): 88.584(85.000)
+	Current DTM method: 1
+[HOT!] CPU is too hot!
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 1596 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 1596 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 632227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 14.7819, Dynamic: 8.09722
+[DTM Trigger] CPU_MAX(THRES): 98.604(104.000), DRAM_MAX(THRES): 87.817(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2128 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2128 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 633226
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 24.1635, Dynamic: 12.0867
+[DTM Trigger] CPU_MAX(THRES): 98.739(104.000), DRAM_MAX(THRES): 86.991(85.000)
+	Current DTM method: 1
+[SNIPER_STATS_MANAGER] Setting frequency for core 0 in DVFS domain 0 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 1 in DVFS domain 1 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 2 in DVFS domain 2 to 2660 MHz
+[SNIPER_STATS_MANAGER] Setting frequency for core 3 in DVFS domain 3 to 2660 MHz
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 634227
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 27.489, Dynamic: 12.3323
+[DTM Trigger] CPU_MAX(THRES): 101.495(104.000), DRAM_MAX(THRES): 86.935(85.000)
+	Current DTM method: 1
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 5460.13 seconds
+
+************recordStats once at 634445
+
+************recordStats once at 634445
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 26.1717, Dynamic: 11.5932
+[DTM Trigger] CPU_MAX(THRES): 100.963(104.000), DRAM_MAX(THRES): 87.170(85.000)
+	Current DTM method: 1
+Here we try remapping!
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 24.0643, Dynamic: 10.2306
+[DTM Trigger] CPU_MAX(THRES): 101.596(104.000), DRAM_MAX(THRES): 87.475(85.000)
+	Current DTM method: 1
+Here we try remapping!
+[SNIPER] Simulated 2294.4M instructions, 1687.6M cycles, 1.36 IPC
+[SNIPER] Simulation speed 418.9 KIPS (104.7 KIPS / target core - 9548.8ns/instr)
+[SNIPER] Sampling: executed 15.49% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[HOOKS] Leaving ROI
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0        1149656696     1787331239       1.55467
+
+                 TIMING INFORMATION
+Start time                        :       -968576620
+Initialization finish time        :        540485660
+Overall finish time               :       1690142356
+Total time with initialization    :      -1636248320
+Total time without initialization :       1149656696
+Overall transpose time            :       1787331239
+Overall transpose fraction        :          1.55467
+
+
+************recordStats once at 634445
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 24.0643, Dynamic: 10.2306
+[DTM Trigger] CPU_MAX(THRES): 101.888(104.000), DRAM_MAX(THRES): 87.668(85.000)
+	Current DTM method: 1
+Here we try remapping!
+
+ ***** [DRAM_CACHE_Result] *****
+
+Number of memory pages: 49443
+*** DRAM Total Access: 18956719, page disabled: 992007, page miss: 264452, block misses: 1767151, miss: 2031603, miss rate: 0.107171
+Block load on page miss: 1401719, Block write back on page miss: 896612
+*** DRAM Total Access In ROI: 12464510, miss: 1680576, miss rate: 0.134829
+*** DRAM Remap Times: 157696 invalid times, 799148 total invalid_blocks, 0 migrate times, 0 total migrate blocks.
+*** DRAM Statistics: 0 reads, 696133676 writes, 668703184 row hits, 0 ACT time, 0 PRE time, 0 RD time, 0 WR time.
+
+ ***** [DRAM_CACHE_Result] *****
+
+[RAMULATOR OUTPUT]./ramulator/configs/HBM-config.cfg
+
+**Total Ticks: 35285100
+
+**Ramulator Active Cycles: 5.40409e+06
+
+**DRAM Cycles: 3.52851e+07
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 9.81268e+06
+
+**Refresh Stats**
+Channel_0: , 10300, 0, 0
+Channel_1: , 10300, 0, 0
+Channel_2: , 10300, 0, 0
+Channel_3: , 10300, 0, 0
+Channel_4: , 10300, 0, 0
+Channel_5: , 10300, 0, 0
+Channel_6: , 10300, 0, 0
+Channel_7: , 10300, 0, 0
+Channel_8: , 10300, 0, 0
+Channel_9: , 10300, 0, 0
+Channel_10: , 10300, 0, 0
+Channel_11: , 10300, 0, 0
+Channel_12: , 10300, 0, 0
+Channel_13: , 10300, 0, 0
+Channel_14: , 10300, 0, 0
+Channel_15: , 10300, 0, 0
+Channel_16: , 10300, 0, 0
+Channel_17: , 10300, 0, 0
+Channel_18: , 10300, 0, 0
+Channel_19: , 10300, 0, 0
+Channel_20: , 10300, 0, 0
+Channel_21: , 10300, 0, 0
+Channel_22: , 10300, 0, 0
+Channel_23: , 10300, 0, 0
+Channel_24: , 10300, 0, 0
+Channel_25: , 10300, 0, 0
+Channel_26: , 10300, 0, 0
+Channel_27: , 10300, 0, 0
+Channel_28: , 10300, 0, 0
+Channel_29: , 10300, 0, 0
+Channel_30: , 10300, 0, 0
+Channel_31: , 10300, 0, 0
+[RAMULATOR OUTPUT]
+
+[Latency-related OUTPUT]
+Total updates: 2493172
+Average number of requests during one update: 2.64697
+Average time between two updates: 2.60145e+18
+Average memory latency: 10.0473
+
+[Latency-related OUTPUT]
+----[REMAP OUTPUT]---
+*****HotAccess: 0
+*****CoolAccess: 35285100
+*****RemapAccess: 0
+*****SingleDisableTime: 34
+*****DoubleDisableTime: 4
+*****RemapTime: 39
+*****RecoveryTime: 13
+---------------------
+_______Offchip_Memory____
+Total requests: 2103665
+Average latency: 12.4087
+_________________________
+[RAMULATOR OUTPUT]./ramulator/configs/DDR4-config.cfg
+
+**Total Ticks: 4996397
+
+**Ramulator Active Cycles: 4.04776e+06
+
+**DRAM Cycles: 4.9964e+06
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 2.24358e+06
+
+**Refresh Stats**
+Channel_0: , 1281, 0, 0
+[RAMULATOR OUTPUT]
+
+[Latency-related OUTPUT]
+Total updates: 0
+Average number of requests during one update: 0
+Average time between two updates: 0
+Average memory latency: 0
+
+[Latency-related OUTPUT]
+
+ ***** [REF/AC_Result] *****
+{Summary}: 2164722 Hot Accesses, 5072233 Cool Accesses.
+
+ ***** [REF/AC_Result] *****
+                     Power     Energy    Energy %
+  core-core         6.55 W     0.68  J     20.59%
+  core-ifetch       0.86 W     0.09  J      2.70%
+  core-alu          0.77 W     0.08  J      2.41%
+  core-int          1.06 W     0.11  J      3.32%
+  core-fp           1.56 W     0.16  J      4.90%
+  core-mem          0.70 W     0.07  J      2.20%
+  icache            0.46 W     0.05  J      1.43%
+  dcache            2.52 W     0.26  J      7.94%
+  dram             16.65 W     1.74  J     52.36%
+  other             0.69 W     0.07  J      2.16%
+
+  core             11.49 W     1.20  J     36.11%
+  cache             2.98 W     0.31  J      9.37%
+  total            31.81 W     3.31  J    100.00%
+Warning: Unable to run gnuplot to create cpi stack graphs.  Maybe gnuplot is not installed?
+[SNIPER] End
+[SNIPER] Elapsed time: 6992.25 seconds
+[SNIPER] Running McPAT
+                                     | Core 0     | Core 1     | Core 2     | Core 3    
+  Instructions                       |  573617410 |  573605892 |  573607299 |  573605693
+  Cycles                             |  277220824 |  277220824 |  277220824 |  277220824
+  IPC                                |       2.07 |       2.07 |       2.07 |       2.07
+  Time (ns)                          |  104218355 |  104218355 |  104218355 |  104218355
+  Idle time (ns)                     |    7000999 |    1041059 |    3256810 |     682435
+  Idle time (%)                      |       6.7% |       1.0% |       3.1% |       0.7%
+Branch predictor stats               |            |            |            |           
+  num correct                        |   48911982 |   48909686 |   48909899 |   48909716
+  num incorrect                      |     407980 |     408805 |     408816 |     408787
+  misprediction rate                 |      0.83% |      0.83% |      0.83% |      0.83%
+  mpki                               |       0.71 |       0.71 |       0.71 |       0.71
+TLB Summary                          |            |            |            |           
+  I-TLB                              |            |            |            |           
+    num accesses                     |   78659012 |   78663605 |   78660706 |   78666651
+    num misses                       |          6 |         30 |         29 |         30
+    miss rate                        |      0.00% |      0.00% |      0.00% |      0.00%
+    mpki                             |       0.00 |       0.00 |       0.00 |       0.00
+  D-TLB                              |            |            |            |           
+    num accesses                     |  142376564 |  142371998 |  142372573 |  142371973
+    num misses                       |    3174994 |    3174978 |    3175127 |    3174998
+    miss rate                        |      2.23% |      2.23% |      2.23% |      2.23%
+    mpki                             |       5.54 |       5.54 |       5.54 |       5.54
+  L2 TLB                             |            |            |            |           
+    num accesses                     |    3175000 |    3175008 |    3175156 |    3175028
+    num misses                       |    3101031 |    3101047 |    3101069 |    3101068
+    miss rate                        |     97.67% |     97.67% |     97.67% |     97.67%
+    mpki                             |       5.41 |       5.41 |       5.41 |       5.41
+Cache Summary                        |            |            |            |           
+  Cache L1-I                         |            |            |            |           
+    num cache accesses               |   78659012 |   78663605 |   78660706 |   78666651
+    num cache misses                 |       3209 |       3411 |       3262 |       3851
+    miss rate                        |      0.00% |      0.00% |      0.00% |      0.00%
+    mpki                             |       0.01 |       0.01 |       0.01 |       0.01
+  Cache L1-D                         |            |            |            |           
+    num cache accesses               |  142376708 |  142372087 |  142372673 |  142372053
+    num cache misses                 |    7470267 |    7454830 |    7454900 |    7454886
+    miss rate                        |      5.25% |      5.24% |      5.24% |      5.24%
+    mpki                             |      13.02 |      13.00 |      13.00 |      13.00
+  Cache L2                           |            |            |            |           
+    num cache accesses               |    7996496 |    7981232 |    7981159 |    7981733
+    num cache misses                 |    2369928 |    2370023 |    2369947 |    2370142
+    miss rate                        |     29.64% |     29.69% |     29.69% |     29.69%
+    mpki                             |       4.13 |       4.13 |       4.13 |       4.13
+DRAM summary                         |            |            |            |           
+  num dram accesses                  |   14710919 |          0 |          0 |          0
+  average dram access latency (ns)   |      13.07 |        inf |        inf |        inf
+  average dram queueing delay        |       0.00 |       0.00 |       0.00 |       0.00
+  average dram bandwidth utilization |      0.00% |      0.00% |      0.00% |      0.00%
+Coherency Traffic                    |            |            |            |           
+  num loads from dram                |    1574859 |    1574637 |    1575259 |    1577287
+  num loads from dram cache          |          0 |          0 |          0 |          0
+  num loads from remote cache        |       3261 |       3391 |       2831 |        797
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.
+copy HotSpot and ramulator files to /scratch/miz087/results/isca/10-20-test_cache_cpu_remap1l_t104_cs4096_splash2_fft_large

@@ -1,0 +1,1770 @@
+[Benchmarks] set sniper output to rundir:  /scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large
+/scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large
+[SPLASH] Benchmarks to run: cholesky
+
+[SPLASH] [========== Running benchmark cholesky ==========]
+[SPLASH] Setting up run directory: /scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large
+[SPLASH] Extracting output: gunzip < /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/cholesky/inputs/tk29.O.Z > /scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large/tk29.O
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large' -sthermalstats --power -c cache_baseline -g --perf_model/dram_cache/cache_size=4096 -g --perf_model/remap_config/on_chip_wb=false -s stop-by-icount:5000000000 --roi --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks  --  /home_masters/miz087/workplace/micro_exp/benchmarks/splash2/splash2/codes/kernels/cholesky/CHOLESKY -p4 tk29.O':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+[DvfsManager] Core 0 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 1 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 2 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 3 at 2.66 GHz (global clock 2.66 GHz)
+Normal Cache Total set: 524288
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+32 4 2 2048 8192 
+Here we initilize a off-chip model!
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+1 1 32 16384 8192 
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large/sim.scripts.py
+[STOPBYICOUNT] Waiting for application ROI
+[STOPBYICOUNT] Then stopping after simulating at least 5000000000 instructions in detail
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using Pin frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+Sparse Cholesky Factorization
+     Problem:         
+     4 Processors
+     Postpass partition size: 32
+     16384 byte cache
+
+
+true partitions
+Fan-out, no block copy-across
+LB domain, embedded distribution
+No ordering
+3231 supers, 4.33 nodes/super, 174 max super
+3231/1187 supers before/after
+393059150/405034303 (1.03) ops before/after amalgamation
+before partition
+Divide for 4 P, 138 domains, 0.57 of work static, 0.96 eff, (inf overall)
+419301 total domain updates
+1779 max height, 405034303 ops, 75891.76 conc, 137.74 bl for 4 P
+Target partition size 0, postpass size 32
+Processor array is 2 by 2
+No redistribution
+Supers: 60: 2  84: 1  111: 1  138: 1  168: 1  222: 1  546: 1  
+Blocks: 27: 1  28: 6  30: 4  31: 2  32: 20  33: 4  34: 5  35: 2  
+44 partitions
+44 partitions, 824 blocks
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+
+************recordStats once at 97886
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[STOPBYICOUNT] Application ROI started, now simulating 5000000000 in detail
+
+************recordStats once at 97886
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Setting instrumentation mode to DETAILED
+
+************recordStats once at 98795
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+************recordStats once at 99801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 32.5145, Dynamic: 17.5875
+*[Hotspot] begin initialization!
+[DTM Trigger] CPU_MAX(THRES): 75.347(105.000), DRAM_MAX(THRES): 62.941(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 100797
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.5586, Dynamic: 22.1464
+[DTM Trigger] CPU_MAX(THRES): 85.174(105.000), DRAM_MAX(THRES): 66.746(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 101801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 38.6926, Dynamic: 21.3999
+[DTM Trigger] CPU_MAX(THRES): 87.426(105.000), DRAM_MAX(THRES): 69.859(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 102801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.2716, Dynamic: 20.7575
+[DTM Trigger] CPU_MAX(THRES): 92.066(105.000), DRAM_MAX(THRES): 72.381(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 103801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.0821, Dynamic: 18.9611
+[DTM Trigger] CPU_MAX(THRES): 93.157(105.000), DRAM_MAX(THRES): 74.437(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 104801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.036, Dynamic: 20.7044
+[DTM Trigger] CPU_MAX(THRES): 95.494(105.000), DRAM_MAX(THRES): 76.018(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 105801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.1085, Dynamic: 19.1944
+[DTM Trigger] CPU_MAX(THRES): 98.104(105.000), DRAM_MAX(THRES): 77.641(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 106801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.3062, Dynamic: 20.0121
+[DTM Trigger] CPU_MAX(THRES): 100.570(105.000), DRAM_MAX(THRES): 79.279(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 107801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.6312, Dynamic: 19.3401
+[DTM Trigger] CPU_MAX(THRES): 100.350(105.000), DRAM_MAX(THRES): 80.523(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 108801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.136, Dynamic: 18.8637
+[DTM Trigger] CPU_MAX(THRES): 100.211(105.000), DRAM_MAX(THRES): 81.335(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 109801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 37.2968, Dynamic: 20.753
+[DTM Trigger] CPU_MAX(THRES): 101.305(105.000), DRAM_MAX(THRES): 82.127(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 110801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.7804, Dynamic: 19.9041
+[DTM Trigger] CPU_MAX(THRES): 103.111(105.000), DRAM_MAX(THRES): 83.086(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 111801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.7223, Dynamic: 18.7045
+[DTM Trigger] CPU_MAX(THRES): 104.581(105.000), DRAM_MAX(THRES): 83.702(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 112801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 33.7876, Dynamic: 16.0936
+[DTM Trigger] CPU_MAX(THRES): 108.058(105.000), DRAM_MAX(THRES): 84.800(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 113801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.0015, Dynamic: 17.5181
+[DTM Trigger] CPU_MAX(THRES): 109.626(105.000), DRAM_MAX(THRES): 86.013(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 114801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.1851, Dynamic: 17.3776
+[DTM Trigger] CPU_MAX(THRES): 109.966(105.000), DRAM_MAX(THRES): 86.846(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 115801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.4859, Dynamic: 17.6554
+[DTM Trigger] CPU_MAX(THRES): 108.301(105.000), DRAM_MAX(THRES): 87.343(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 116801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 36.0775, Dynamic: 17.7308
+[DTM Trigger] CPU_MAX(THRES): 109.184(105.000), DRAM_MAX(THRES): 87.011(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 117801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.4775, Dynamic: 19.0987
+[DTM Trigger] CPU_MAX(THRES): 110.659(105.000), DRAM_MAX(THRES): 87.123(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 118799
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.3166, Dynamic: 17.7247
+[DTM Trigger] CPU_MAX(THRES): 111.003(105.000), DRAM_MAX(THRES): 87.794(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 119801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 35.0756, Dynamic: 21.0524
+[DTM Trigger] CPU_MAX(THRES): 110.640(105.000), DRAM_MAX(THRES): 88.487(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 120801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 34.4225, Dynamic: 19.9604
+[DTM Trigger] CPU_MAX(THRES): 111.665(105.000), DRAM_MAX(THRES): 89.193(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 121800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 38.0173, Dynamic: 21.5013
+[DTM Trigger] CPU_MAX(THRES): 112.068(105.000), DRAM_MAX(THRES): 89.852(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 122801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 38.5123, Dynamic: 21.7946
+[DTM Trigger] CPU_MAX(THRES): 113.008(105.000), DRAM_MAX(THRES): 90.471(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 123800
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 40.6489, Dynamic: 22.1142
+[DTM Trigger] CPU_MAX(THRES): 114.645(105.000), DRAM_MAX(THRES): 91.075(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 124801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.7089, Dynamic: 22.1562
+[DTM Trigger] CPU_MAX(THRES): 115.057(105.000), DRAM_MAX(THRES): 91.615(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 125801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.5401, Dynamic: 21.7152
+[DTM Trigger] CPU_MAX(THRES): 114.602(105.000), DRAM_MAX(THRES): 91.941(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 126801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.3294, Dynamic: 21.8629
+[DTM Trigger] CPU_MAX(THRES): 115.816(105.000), DRAM_MAX(THRES): 92.319(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 127801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.5129, Dynamic: 22.1774
+[DTM Trigger] CPU_MAX(THRES): 116.644(105.000), DRAM_MAX(THRES): 92.759(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 128801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 40.6675, Dynamic: 22.3752
+[DTM Trigger] CPU_MAX(THRES): 116.848(105.000), DRAM_MAX(THRES): 93.111(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 129801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.7844, Dynamic: 22.6102
+[DTM Trigger] CPU_MAX(THRES): 117.821(105.000), DRAM_MAX(THRES): 93.495(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 130801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.7644, Dynamic: 23.0589
+[DTM Trigger] CPU_MAX(THRES): 118.799(105.000), DRAM_MAX(THRES): 93.932(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 131801
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.8234, Dynamic: 23.0938
+[DTM Trigger] CPU_MAX(THRES): 119.127(105.000), DRAM_MAX(THRES): 94.305(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+
+************recordStats once at 132799
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 41.1962, Dynamic: 23.4783
+[DTM Trigger] CPU_MAX(THRES): 119.228(105.000), DRAM_MAX(THRES): 94.581(85.000)
+	Current DTM method: 0
+Here we try remapping!
+Vault num: 32, Bank num: 8, Row num: 2048
+Vault#0 Delay: 0
+Vault#1 Delay: 0
+Vault#2 Delay: 0
+Vault#3 Delay: 0
+Vault#4 Delay: 0
+Vault#5 Delay: 0
+Vault#6 Delay: 0
+Vault#7 Delay: 0
+Vault#8 Delay: 0
+Vault#9 Delay: 0
+Vault#10 Delay: 0
+Vault#11 Delay: 0
+Vault#12 Delay: 0
+Vault#13 Delay: 0
+Vault#14 Delay: 0
+Vault#15 Delay: 0
+Vault#16 Delay: 0
+Vault#17 Delay: 0
+Vault#18 Delay: 0
+Vault#19 Delay: 0
+Vault#20 Delay: 0
+Vault#21 Delay: 0
+Vault#22 Delay: 0
+Vault#23 Delay: 0
+Vault#24 Delay: 0
+Vault#25 Delay: 0
+Vault#26 Delay: 0
+Vault#27 Delay: 0
+Vault#28 Delay: 0
+Vault#29 Delay: 0
+Vault#30 Delay: 0
+Vault#31 Delay: 0
+-----and here we finish handling remapping results in cache controller! the Latency: 0
+Bus Delay: 0, Process Latency: 0
+---invalid_cnt: 0, total: 524288
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 1947.85 seconds
+
+************recordStats once at 132898
+
+************recordStats once at 132898
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 39.431, Dynamic: 23.1225
+[DTM Trigger] CPU_MAX(THRES): 119.869(105.000), DRAM_MAX(THRES): 94.832(85.000)
+	Current DTM method: 0
+Here we try remapping!
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.6345, Dynamic: 11.0563
+[DTM Trigger] CPU_MAX(THRES): 112.204(105.000), DRAM_MAX(THRES): 94.101(85.000)
+	Current DTM method: 0
+Here we try remapping!
+[SNIPER] Simulated 831.1M instructions, 353.5M cycles, 2.35 IPC
+[SNIPER] Simulation speed 421.2 KIPS (105.3 KIPS / target core - 9496.7ns/instr)
+[SNIPER] Sampling: executed 26.26% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[HOOKS] Leaving ROI
+405034303 operations for factorization
+
+                            PROCESS STATISTICS
+              Total
+ Proc         Time 
+    0    1886168253
+                            TIMING INFORMATION
+Start time                        :       -998359162
+Initialization finish time        :       -452318422
+Overall finish time               :       1433849831
+Total time with initialization    :      -1862758303
+Total time without initialization :       1886168253
+
+
+************recordStats once at 132898
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 25.6345, Dynamic: 11.0563
+[DTM Trigger] CPU_MAX(THRES): 111.063(105.000), DRAM_MAX(THRES): 92.961(85.000)
+	Current DTM method: 0
+Here we try remapping!
+
+ ***** [DRAM_CACHE_Result] *****
+
+Number of memory pages: 8250
+*** DRAM Total Access: 5318314, page disabled: 0, page miss: 16870, block misses: 182682, miss: 199552, miss rate: 0.0375217
+Block load on page miss: 0, Block write back on page miss: 0
+*** DRAM Total Access In ROI: 3109176, miss: 103428, miss rate: 0.0332654
+*** DRAM Remap Times: 0 invalid times, 0 total invalid_blocks, 0 migrate times, 0 total migrate blocks.
+*** DRAM Statistics: 0 reads, 89626091 writes, 85255759 row hits, 0 ACT time, 0 PRE time, 0 RD time, 0 WR time.
+
+ ***** [DRAM_CACHE_Result] *****
+
+[RAMULATOR OUTPUT]./ramulator/configs/HBM-config.cfg
+
+**Total Ticks: 10470816
+
+**Ramulator Active Cycles: 2.03964e+06
+
+**DRAM Cycles: 1.04708e+07
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 2.97148e+06
+
+**Refresh Stats**
+Channel_0: , 2452, 0, 0
+Channel_1: , 2452, 0, 0
+Channel_2: , 2452, 0, 0
+Channel_3: , 2452, 0, 0
+Channel_4: , 2452, 0, 0
+Channel_5: , 2452, 0, 0
+Channel_6: , 2452, 0, 0
+Channel_7: , 2452, 0, 0
+Channel_8: , 2452, 0, 0
+Channel_9: , 2452, 0, 0
+Channel_10: , 2452, 0, 0
+Channel_11: , 2452, 0, 0
+Channel_12: , 2452, 0, 0
+Channel_13: , 2452, 0, 0
+Channel_14: , 2452, 0, 0
+Channel_15: , 2452, 0, 0
+Channel_16: , 2452, 0, 0
+Channel_17: , 2452, 0, 0
+Channel_18: , 2452, 0, 0
+Channel_19: , 2452, 0, 0
+Channel_20: , 2452, 0, 0
+Channel_21: , 2452, 0, 0
+Channel_22: , 2452, 0, 0
+Channel_23: , 2452, 0, 0
+Channel_24: , 2452, 0, 0
+Channel_25: , 2452, 0, 0
+Channel_26: , 2452, 0, 0
+Channel_27: , 2452, 0, 0
+Channel_28: , 2452, 0, 0
+Channel_29: , 2452, 0, 0
+Channel_30: , 2452, 0, 0
+Channel_31: , 2452, 0, 0
+[RAMULATOR OUTPUT]
+
+[Latency-related OUTPUT]
+Total updates: 494752
+Average number of requests during one update: 4.32515
+Average time between two updates: 3.91543e+18
+Average memory latency: 9.88754
+
+[Latency-related OUTPUT]
+----[REMAP OUTPUT]---
+*****HotAccess: 350083
+*****CoolAccess: 10120733
+*****RemapAccess: 0
+*****SingleDisableTime: 0
+*****DoubleDisableTime: 0
+*****RemapTime: 0
+*****RecoveryTime: 0
+---------------------
+_______Offchip_Memory____
+Total requests: 182682
+Average latency: 5.10338
+_________________________
+[RAMULATOR OUTPUT]./ramulator/configs/DDR4-config.cfg
+
+**Total Ticks: 182682
+
+**Ramulator Active Cycles: 182679
+
+**DRAM Cycles: 182682
+
+**Maximum Bandwidth: 0
+
+Number of Incoming Requests: 37770
+
+**Refresh Stats**
+Channel_0: , 46, 0, 0
+[RAMULATOR OUTPUT]
+
+[Latency-related OUTPUT]
+Total updates: 0
+Average number of requests during one update: 0
+Average time between two updates: 0
+Average memory latency: 0
+
+[Latency-related OUTPUT]
+
+ ***** [REF/AC_Result] *****
+{Summary}: 290117 Hot Accesses, 1695343 Cool Accesses.
+
+ ***** [REF/AC_Result] *****
+                     Power     Energy    Energy %
+  core-core         7.84 W     0.28  J     24.15%
+  core-ifetch       0.91 W     0.03  J      2.79%
+  core-alu          1.00 W     0.04  J      3.09%
+  core-int          1.09 W     0.04  J      3.35%
+  core-fp           2.16 W     0.08  J      6.66%
+  core-mem          1.13 W     0.04  J      3.47%
+  icache            0.46 W     0.02  J      1.43%
+  dcache            3.93 W     0.14  J     12.10%
+  dram             13.33 W     0.47  J     41.08%
+  other             0.61 W     0.02  J      1.88%
+
+  core             14.12 W     0.50  J     43.51%
+  cache             4.39 W     0.15  J     13.53%
+  total            32.46 W     1.14  J    100.00%
+Warning: Unable to run gnuplot to create cpi stack graphs.  Maybe gnuplot is not installed?
+[SNIPER] End
+[SNIPER] Elapsed time: 2481.99 seconds
+[SNIPER] Running McPAT
+                                     | Core 0     | Core 1     | Core 2     | Core 3    
+  Instructions                       |  225183364 |  200974348 |  209275869 |  195645915
+  Cycles                             |   93358471 |   93358471 |   93358471 |   93358471
+  IPC                                |       2.41 |       2.15 |       2.24 |       2.10
+  Time (ns)                          |   35097170 |   35097170 |   35097170 |   35097170
+  Idle time (ns)                     |     243167 |     174356 |     188030 |     152068
+  Idle time (%)                      |       0.7% |       0.5% |       0.5% |       0.4%
+Branch predictor stats               |            |            |            |           
+  num correct                        |   19420809 |   12777663 |   14536170 |    6825064
+  num incorrect                      |     140239 |     134858 |     150365 |     156722
+  misprediction rate                 |      0.72% |      1.04% |      1.02% |      2.24%
+  mpki                               |       0.62 |       0.67 |       0.72 |       0.80
+TLB Summary                          |            |            |            |           
+  I-TLB                              |            |            |            |           
+    num accesses                     |   33065260 |   25972411 |   28091980 |   21047200
+    num misses                       |         15 |         47 |         47 |         47
+    miss rate                        |      0.00% |      0.00% |      0.00% |      0.00%
+    mpki                             |       0.00 |       0.00 |       0.00 |       0.00
+  D-TLB                              |            |            |            |           
+    num accesses                     |   85395520 |   77475338 |   79345351 |   76716294
+    num misses                       |      16488 |      19089 |      19120 |      19928
+    miss rate                        |      0.02% |      0.02% |      0.02% |      0.03%
+    mpki                             |       0.07 |       0.09 |       0.09 |       0.10
+  L2 TLB                             |            |            |            |           
+    num accesses                     |      16503 |      19136 |      19167 |      19975
+    num misses                       |       4281 |       5004 |       5053 |       4801
+    miss rate                        |     25.94% |     26.15% |     26.36% |     24.04%
+    mpki                             |       0.02 |       0.02 |       0.02 |       0.02
+Cache Summary                        |            |            |            |           
+  Cache L1-I                         |            |            |            |           
+    num cache accesses               |   33065260 |   25972411 |   28091980 |   21047200
+    num cache misses                 |      12366 |      12789 |      12013 |      15489
+    miss rate                        |      0.04% |      0.05% |      0.04% |      0.07%
+    mpki                             |       0.05 |       0.06 |       0.06 |       0.08
+  Cache L1-D                         |            |            |            |           
+    num cache accesses               |   85399458 |   77482931 |   79351453 |   76720601
+    num cache misses                 |    1151068 |    1244114 |    1211737 |    1255134
+    miss rate                        |      1.35% |      1.61% |      1.53% |      1.64%
+    mpki                             |       5.11 |       6.19 |       5.79 |       6.42
+  Cache L2                           |            |            |            |           
+    num cache accesses               |    1421166 |    1641427 |    1531746 |    1687723
+    num cache misses                 |     411000 |     588086 |     504609 |     601069
+    miss rate                        |     28.92% |     35.83% |     32.94% |     35.61%
+    mpki                             |       1.83 |       2.93 |       2.41 |       3.07
+DRAM summary                         |            |            |            |           
+  num dram accesses                  |    3571576 |          0 |          0 |          0
+  average dram access latency (ns)   |       6.54 |        inf |        inf |        inf
+  average dram queueing delay        |       0.00 |       0.00 |       0.00 |       0.00
+  average dram bandwidth utilization |      0.00% |      0.00% |      0.00% |      0.00%
+Coherency Traffic                    |            |            |            |           
+  num loads from dram                |     339087 |     482899 |     403311 |     505779
+  num loads from dram cache          |          0 |          0 |          0 |          0
+  num loads from remote cache        |      14522 |      23117 |      29247 |      11484
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.
+copy HotSpot and ramulator files to /scratch/miz087/results/isca/10-20-test_cache_baseline_cs4096_splash2_cholesky_large

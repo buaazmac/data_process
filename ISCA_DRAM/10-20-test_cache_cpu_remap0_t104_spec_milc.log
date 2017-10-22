@@ -1,0 +1,279 @@
+[SNIPER] (0) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
+[SNIPER] (1) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
+[SNIPER] (2) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
+[SNIPER] (3) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+[DvfsManager] Core 0 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 1 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 2 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 3 at 2.66 GHz (global clock 2.66 GHz)
+Normal Cache Total set: 524288
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+32 4 2 2048 8192 
+Here we initilize a off-chip model!
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+1 1 32 16384 8192 
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/isca/10-20-test_cache_cpu_remap0_t104_spec/sim.scripts.py
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running full application in DETAILED mode
+[SNIPER] --------------------------------------------------------------------------------
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Enabling performance models
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Setting instrumentation mode to DETAILED
+[TRACE:0] [HOOKS] Entering ROI
+[TRACE:2] [HOOKS] Entering ROI
+[TRACE:1] [HOOKS] Entering ROI
+[TRACE:3] [HOOKS] Entering ROI
+
+************recordStats once at 1000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 179, in parse_results_from_dir
+    results += stats.parse_stats((k1, k2), ncores, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 8, in parse_stats
+    v2 = self.read_snapshot(k2, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 44, in read_snapshot
+    raise ValueError('Invalid prefix %s' % prefix)
+ValueError: Invalid prefix energystats-tempA
+
+************recordStats once at 2000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 178, in parse_results_from_dir
+    stats = sniper_stats.SniperStats(resultsdir)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 57, in SniperStats
+    stats = sniper_stats_sqlite.SniperStatsSqlite(os.path.join(resultsdir, 'sim.stats.sqlite3'))
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 7, in __init__
+    self.names = self.read_metricnames()
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 20, in read_metricnames
+    c.execute('select nameid, objectname, metricname from `names`')
+sqlite3.OperationalError: database is locked
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 167, in hook_periodic
+    self.callback(time, time_delta)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 87, in periodic
+    self.update()
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 118, in update
+    sim.util.db_delete(self.name_last)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 202, in db_delete
+    prefixid = sim.stats.db.execute('SELECT prefixid FROM prefixes WHERE prefixname = ?', (prefix,)).fetchall()
+sqlite3.OperationalError: database is locked
+
+************recordStats once at 3000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 178, in parse_results_from_dir
+    stats = sniper_stats.SniperStats(resultsdir)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 57, in SniperStats
+    stats = sniper_stats_sqlite.SniperStatsSqlite(os.path.join(resultsdir, 'sim.stats.sqlite3'))
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 7, in __init__
+    self.names = self.read_metricnames()
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 20, in read_metricnames
+    c.execute('select nameid, objectname, metricname from `names`')
+sqlite3.OperationalError: database is locked
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 167, in hook_periodic
+    self.callback(time, time_delta)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 87, in periodic
+    self.update()
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 118, in update
+    sim.util.db_delete(self.name_last)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 202, in db_delete
+    prefixid = sim.stats.db.execute('SELECT prefixid FROM prefixes WHERE prefixname = ?', (prefix,)).fetchall()
+sqlite3.OperationalError: database is locked
+[TRACE:0] SU3 with improved KS action
+[TRACE:0] Microcanonical simulation with refreshing
+[TRACE:0] MIMD version 6
+[TRACE:0] Machine = Scalar processor, with 1 nodes
+[TRACE:0] R algorithm
+[TRACE:0] type 0 for no prompts  or 1 for prompts
+[TRACE:0] nflavors 2
+[TRACE:0] nx 20
+[TRACE:0] ny 20
+[TRACE:0] nz 20
+[TRACE:0] nt 20
+[TRACE:0] iseed 1234
+[TRACE:0] LAYOUT = Hypercubes, options = EVENFIRST,
+[TRACE:0] Made lattice
+[TRACE:2] SU3 with improved KS action
+[TRACE:2] Microcanonical simulation with refreshing
+[TRACE:2] MIMD version 6
+[TRACE:2] Machine = Scalar processor, with 1 nodes
+[TRACE:2] R algorithm
+[TRACE:2] type 0 for no prompts  or 1 for prompts
+[TRACE:2] nflavors 2
+[TRACE:2] nx 20
+[TRACE:2] ny 20
+[TRACE:2] nz 20
+[TRACE:2] nt 20
+[TRACE:2] iseed 1234
+[TRACE:2] LAYOUT = Hypercubes, options = EVENFIRST,
+[TRACE:2] Made lattice
+[TRACE:1] SU3 with improved KS action
+[TRACE:1] Microcanonical simulation with refreshing
+[TRACE:1] MIMD version 6
+[TRACE:1] Machine = Scalar processor, with 1 nodes
+[TRACE:1] R algorithm
+[TRACE:1] type 0 for no prompts  or 1 for prompts
+[TRACE:1] nflavors 2
+[TRACE:1] nx 20
+[TRACE:1] ny 20
+[TRACE:1] nz 20
+[TRACE:1] nt 20
+[TRACE:1] iseed 1234
+[TRACE:1] LAYOUT = Hypercubes, options = EVENFIRST,
+[TRACE:1] Made lattice
+[TRACE:3] SU3 with improved KS action
+[TRACE:3] Microcanonical simulation with refreshing
+[TRACE:3] MIMD version 6
+[TRACE:3] Machine = Scalar processor, with 1 nodes
+[TRACE:3] R algorithm
+[TRACE:3] type 0 for no prompts  or 1 for prompts
+[TRACE:3] nflavors 2
+[TRACE:3] nx 20
+[TRACE:3] ny 20
+[TRACE:3] nz 20
+[TRACE:3] nt 20
+[TRACE:3] iseed 1234
+[TRACE:3] LAYOUT = Hypercubes, options = EVENFIRST,
+[TRACE:3] Made lattice
+
+************recordStats once at 4000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 178, in parse_results_from_dir
+    stats = sniper_stats.SniperStats(resultsdir)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 57, in SniperStats
+    stats = sniper_stats_sqlite.SniperStatsSqlite(os.path.join(resultsdir, 'sim.stats.sqlite3'))
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 7, in __init__
+    self.names = self.read_metricnames()
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 20, in read_metricnames
+    c.execute('select nameid, objectname, metricname from `names`')
+sqlite3.OperationalError: database is locked
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 167, in hook_periodic
+    self.callback(time, time_delta)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 87, in periodic
+    self.update()
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 118, in update
+    sim.util.db_delete(self.name_last)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 202, in db_delete
+    prefixid = sim.stats.db.execute('SELECT prefixid FROM prefixes WHERE prefixname = ?', (prefix,)).fetchall()
+sqlite3.OperationalError: database is locked
+
+************recordStats once at 5000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 178, in parse_results_from_dir
+    stats = sniper_stats.SniperStats(resultsdir)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 57, in SniperStats
+    stats = sniper_stats_sqlite.SniperStatsSqlite(os.path.join(resultsdir, 'sim.stats.sqlite3'))
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 7, in __init__
+    self.names = self.read_metricnames()
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 20, in read_metricnames
+    c.execute('select nameid, objectname, metricname from `names`')
+sqlite3.OperationalError: database is locked
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 167, in hook_periodic
+    self.callback(time, time_delta)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 87, in periodic
+    self.update()
+  File "/home_masters/miz087/workplace/micro_exp/scripts/thermalstats.py", line 118, in update
+    sim.util.db_delete(self.name_last)
+  File "/home_masters/miz087/workplace/micro_exp/scripts/sim/util.py", line 202, in db_delete
+    prefixid = sim.stats.db.execute('SELECT prefixid FROM prefixes WHERE prefixname = ?', (prefix,)).fetchall()
+sqlite3.OperationalError: database is locked
+
+************recordStats once at 6000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+
+************recordStats once at 7000
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 26.486, Dynamic: 12.7699
+*[Hotspot] begin initialization!
+error: invalid trace file format
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 179, in parse_results_from_dir
+    results += stats.parse_stats((k1, k2), ncores, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 8, in parse_stats
+    v2 = self.read_snapshot(k2, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 44, in read_snapshot
+    raise ValueError('Invalid prefix %s' % prefix)
+ValueError: Invalid prefix roi-end
+[SNIPER] End
+[SNIPER] Elapsed time: 617.72 seconds
+[SNIPER] Running McPAT
+--no-roi 
+--power 
+-n 4
+-c cache_cpu_remap0
+-d /scratch/miz087/results/isca/10-20-test_cache_cpu_remap0_t104_spec
+-T /home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
+hehe /home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
+-g --perf_model/thermal/cpu_temp_thres=104
+-g --perf_model/remap_config/on_chip_wb=false
+copy HotSpot and ramulator files to /scratch/miz087/results/isca/10-20-test_cache_cpu_remap0_t104_spec
+haha: /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/isca/10-20-test_cache_cpu_remap0_t104_spec' -sthermalstats --power -c cache_cpu_remap0 -g --perf_model/thermal/cpu_temp_thres=104 -g --perf_model/remap_config/on_chip_wb=false --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks --traces=/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift,/home/miz087/workplace/micro_exp/benchmarks/traces/milc/milc.0.sift
