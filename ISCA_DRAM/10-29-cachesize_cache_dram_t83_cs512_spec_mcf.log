@@ -1,0 +1,68 @@
+[SNIPER] (0) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace0
+[SNIPER] (1) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace1
+[SNIPER] (2) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace2
+[SNIPER] (3) Using trace file /home_masters/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace3
+[SNIPER] Start
+----------BEGIN_INIT_STATS_MANAGER------------
+----------END_INIT_STATS_MANAGER------------
+[DvfsManager] Core 0 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 1 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 2 at 2.66 GHz (global clock 2.66 GHz)
+[DvfsManager] Core 3 at 2.66 GHz (global clock 2.66 GHz)
+Normal Cache Total set: 65536
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+32 4 2 2048 8192 
+Here we initilize a off-chip model!
+[Ramulator config] SpeedEntry: nRFC(130), nREFI(3900), nREFI1B(256)
+Each level size: 
+1 1 32 16384 8192 
+now initialize a stacked dram unison cache
+Executing Python script /scratch/miz087/results/isca/10-29-cachesize_cache_dram_t83_cs512_spec_mcf/sim.scripts.py
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running full application in DETAILED mode
+[SNIPER] --------------------------------------------------------------------------------
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Enabling performance models
+
+************recordStats once at 0
+[Warning] power scale is less than 1, please check!
+[Overall Power Consumption] Peak: 0, Dynamic: 0
+[Warning] the power of processor is too small, we skip the temperature calculation!
+[SNIPER] Setting instrumentation mode to DETAILED
+Cannot open /home_masters/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace3
+sniper: sift_reader.cc:98: void Sift::Reader::initStream(): Assertion `false' failed.
+Traceback (most recent call last):
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 1321, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/mcpat.py", line 141, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_lib.py", line 179, in parse_results_from_dir
+    results += stats.parse_stats((k1, k2), ncores, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats.py", line 8, in parse_stats
+    v2 = self.read_snapshot(k2, metrics = metrics)
+  File "/home_masters/miz087/workplace/micro_exp/tools/sniper_stats_sqlite.py", line 44, in read_snapshot
+    raise ValueError('Invalid prefix %s' % prefix)
+ValueError: Invalid prefix roi-end
+[SNIPER] End
+[SNIPER] Elapsed time: 0.73 seconds
+[SNIPER] Running McPAT
+--no-roi 
+--power 
+-n 4
+-c cache_dram
+-d /scratch/miz087/results/isca/10-29-cachesize_cache_dram_t83_cs512_spec_mcf
+-T /home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace0,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace1,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace2,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace3
+hehe /home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace0,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace1,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace2,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace3
+-g --perf_model/dram_cache/cache_size=512
+-g --perf_model/thermal/dram_temp_thres=83
+-g --perf_model/remap_config/on_chip_wb=false
+copy HotSpot and ramulator files to /scratch/miz087/results/isca/10-29-cachesize_cache_dram_t83_cs512_spec_mcf
+haha: /home_masters/miz087/workplace/micro_exp/run-sniper -n 4 -m 'localhost' -d '/scratch/miz087/results/isca/10-29-cachesize_cache_dram_t83_cs512_spec_mcf' -sthermalstats --power -c cache_dram -g --perf_model/dram_cache/cache_size=512 -g --perf_model/thermal/dram_temp_thres=83 -g --perf_model/remap_config/on_chip_wb=false --curdir=/home_masters/miz087/workplace/micro_exp/benchmarks --traces=/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace0,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace1,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace2,/home/miz087/workplace/micro_exp/benchmarks/traces/mcf/mcf.trace3
