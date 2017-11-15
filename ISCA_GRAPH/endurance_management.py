@@ -27,15 +27,16 @@ def compute_block_endurance(exe_time, lifetime_arr):
   current_min = 100.0
   exe_cnt = 0
   while current_min > 0:
-    print 'Current iteration: ' + str(exe_cnt)
+    #print 'Current iteration: ' + str(exe_cnt)
     exe_cnt += 1
     for i in xrange(len(remaining)):
       remaining[i] = remaining[i] - wear_speed[i]
     current_min = min(remaining)
-    remaining[i].sort(reverse=False)
+    remaining.sort(reverse=False)
+  print orig_lt, exe_time * exe_cnt
   return (orig_lt, exe_time * exe_cnt)
 
-def extract_data(file_name):
+def extract_data(file_path, file_name):
   config_str = file_name.split('.')[0]
   config_arr = config_str.split('-')
   tag = config_arr[0] + '-' + config_arr[1] + '-' + config_arr[2]
@@ -52,15 +53,14 @@ def extract_data(file_name):
   blocks_orig_lt = []
   blocks_opt_lt = []
   block_sum = 0
-  block_flag = False
-  write_time_flag = True
+  write_time_flag = False
   n_compute = -1
-  with open(file_name) as f:
+  with open(file_path) as f:
     for line in f:
       if 'Process Blocks(' in line:
-        n_process = int(line.split()[3][:-2])
-        n_reduce = int(line.split())[7][:-2])
-        n_apply = int(line.split())[11][:-2])
+        n_process = int(line.split()[3][:-1])
+        n_reduce = int(line.split()[7][:-1])
+        n_apply = int(line.split()[11])
       elif 'Completion Time' in line:
         exe_time = float(line.strip().split()[-1]) / 1000000000000.0
       elif 'Energy Consumption' in line:
@@ -73,20 +73,48 @@ def extract_data(file_name):
           p_avg_write = avg_write
         elif block_sum == 2:
           r_avg_write = avg_write
-        elif block_sim == 3:
+        elif block_sum == 3:
           a_avg_write = avg_write
-        elif 'Block#' in line:
-          block_flag = True
-        elif block_flag:
-          block_flag = False
-          arr = line.split(', ')
-        elif 'Block#' in line:
-          write_time_flag = True
-          n_compute = int(line.strip().split()[-1])
-        elif write_time_flag:
-          write_time_flag = False
-          dist_arr = line.strip().split(',')
-          block_lt = compute_row_endurance(exe_time, dist_arr, n_compute, compute_rows)
-          blocks_orig_lt.append(block_lt[0])
-          blocks_opt_lt.append(block_lt[1])
+      elif 'Block#' in line:
+        write_time_flag = True
+        n_compute = int(line.strip().split()[-1]) + 30
+      elif write_time_flag:
+        write_time_flag = False
+        dist_arr = line.strip().split(',')
+        block_lt = compute_row_endurance(exe_time, dist_arr, n_compute, compute_rows)
+        if block_lt[1] < 1:
+          print line, block_lt[1]
+        blocks_orig_lt.append(block_lt[0])
+        blocks_opt_lt.append(block_lt[1])
+  overall_lt = compute_block_endurance(exe_time, blocks_opt_lt)
   res = {}
+  data = {}
+  data['n_process'] = n_process
+  data['n_reduce'] = n_reduce
+  data['n_apply'] = n_apply
+  data['exe_time'] = exe_time
+  data['energy'] = energy
+  data['b_orig_lt'] = blocks_orig_lt
+  data['b_opt_lt'] = blocks_opt_lt
+  data['orig_lt'] = overall_lt[0]
+  data['opt_lt'] = overall_lt[1]
+  res['tag'] = tag
+  res['app'] = app
+  res['graph'] = graph
+  res['n_rows'] = pr
+  res['s_buffer'] = mb
+  res['data'] = data
+  return res
+
+# Here is the main function
+if __name__ == '__main__':
+  t_dir = os.path.abspath(sys.argv[1])
+  o_dir = os.path.abspath(sys.argv[2])
+  items = os.listdir(t_dir)
+  orig_list = []
+  for item in items:
+    if item.endswith('.log'):
+      path = t_dir + '/' + item
+      tmp_rst = extract_data(path, item)
+      orig_list.append(tmp_rst)
+  print orig_list
